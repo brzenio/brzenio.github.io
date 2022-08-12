@@ -1,0 +1,502 @@
+<DOCTYPE html>
+
+<!-- Demonstrates table with Bootstrap -->
+
+<html lang="pl">
+<style>
+
+table {
+      /*border-collapse: collapse;*/
+      /*border: 2px solid rgb(200,200,200);*/
+      /*letter-spacing: 1px;*/
+      /*font-size: 0.8rem;*/
+      overflow-x: auto;
+
+
+    }
+
+body
+{
+  overflow-x:hidden;
+}
+</style>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <title>bootstrap</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+<body style="overflow-x:hidden;">
+  <div style="overflow:auto">
+  <table class="table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>image</th>
+      <th>book_title</th>
+      <th>name</th>
+      <th>datePublished</th>
+      <th>numberOfPages</th>
+      <th>ratingValue</th>
+      <th>ratingCount</th>
+      <th>category</th>
+      <th>publisher</th>
+      <th>series</th>
+      <th>readingTime</th>
+      <th>tags</th>
+      <th>originalTitle</th>
+      <th>firstPolishPublish</th>
+      <th>originPublish</th>
+      <th>isbn</th>
+      <th>inLanguage</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4889000/4889761/740089-352x500.jpg" width="60" ></td>
+      <td>Wędrowny Zakład Fotograficzny</td>
+      <td>Agnieszka Pajączkowska</td>
+      <td>2019-08-14</td>
+      <td>384</td>
+      <td>8,0</td>
+      <td>545</td>
+      <td>reportaż</td>
+      <td>Czarne</td>
+      <td>Poza serią</td>
+      <td>12 h 48 min - 19 h 12 min</td>
+      <td>literatura faktu, niebezpieczeństwo, pogranicze kultur, relacje międzyludzkie, reportaż, trauma, wojna, wspomnienia, życie codzienne</td>
+      <td>NaN</td>
+      <td>2019-08-14</td>
+      <td>NaN</td>
+      <td>9788380498921</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4889761/wedrowny-zaklad-fotograficzny</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4893000/4893518/747118-352x500.jpg" width="60" ></td>
+      <td>Babel. W dwadzieścia języków dookoła świata</td>
+      <td>Gaston Dorren</td>
+      <td>2019-08-14</td>
+      <td>432</td>
+      <td>6,9</td>
+      <td>416</td>
+      <td>językoznawstwo, nauka o literaturze</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td>14 h 24 min - 21 h 36 min</td>
+      <td>językoznawstwo, lingwistyka</td>
+      <td>Babel: Around the World in Twenty Languages</td>
+      <td>2019-08-14</td>
+      <td>NaN</td>
+      <td>9788366147188</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4893518/babel-w-dwadziescia-jezykow-dookola-swiata</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4973000/4973522/910118-352x500.jpg" width="60" ></td>
+      <td>Gadka. W sześćdziesiąt języków dookoła Europy</td>
+      <td>Gaston Dorren</td>
+      <td>2021-08-17</td>
+      <td>384</td>
+      <td>7,3</td>
+      <td>145</td>
+      <td>językoznawstwo, nauka o literaturze</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td>12 h 48 min - 19 h 12 min</td>
+      <td>językoznawstwo, lingwistyka</td>
+      <td>Lingo: Around Europe in Sixty Languages</td>
+      <td>2021-08-17</td>
+      <td>2015-01-01</td>
+      <td>9788366147829</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4973522/gadka-w-szescdziesiat-jezykow-dookola-europy</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/272000/272749/430190-352x500.jpg" width="60" ></td>
+      <td>Co może pójść nie tak?</td>
+      <td>Jeremy Clarkson</td>
+      <td>2015-11-04</td>
+      <td>700</td>
+      <td>7,1</td>
+      <td>232</td>
+      <td>satyra</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>23 h 20 min - 35 h 0 min</td>
+      <td>Jeremy Clarkson</td>
+      <td>NaN</td>
+      <td>2015-11-04</td>
+      <td>NaN</td>
+      <td>9788365315076</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/272749/co-moze-pojsc-nie-tak</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/78000/78234/352x500.jpg" width="60" ></td>
+      <td>Doprowadzony do szału</td>
+      <td>Jeremy Clarkson</td>
+      <td>2010-11-01</td>
+      <td>472</td>
+      <td>6,9</td>
+      <td>339</td>
+      <td>motoryzacja</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>15 h 44 min - 23 h 36 min</td>
+      <td>clarkson, moto, humor, felietony, top gear</td>
+      <td>Driven to distraction</td>
+      <td>2010-11-01</td>
+      <td>NaN</td>
+      <td>978-83-61428-25-1</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/78234/doprowadzony-do-szalu</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>19</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/49000/49210/352x500.jpg" width="60" ></td>
+      <td>I jeszcze jedno...</td>
+      <td>Jeremy Clarkson</td>
+      <td>2007-01-01</td>
+      <td>394</td>
+      <td>6,8</td>
+      <td>952</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>13 h 8 min - 19 h 42 min</td>
+      <td>Jeremy Clarkson, Clarkson</td>
+      <td>And Another Thing... World According to Clarkson, Volume 2</td>
+      <td>2007-01-01</td>
+      <td>2007-10-01</td>
+      <td>9788360355039</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/49210/i-jeszcze-jedno</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4948000/4948581/860640-352x500.jpg" width="60" ></td>
+      <td>Naprawdę?</td>
+      <td>Jeremy Clarkson</td>
+      <td>2020-11-25</td>
+      <td>578</td>
+      <td>6,8</td>
+      <td>106</td>
+      <td>reportaż</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>19 h 16 min - 28 h 54 min</td>
+      <td>Reportaż, Humor, Motoryzacja</td>
+      <td>NaN</td>
+      <td>2020-11-25</td>
+      <td>NaN</td>
+      <td>9788366575486</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4948581/naprawde</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>18</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/5000/5729/352x500.jpg" width="60" ></td>
+      <td>Nie zatrzymasz mnie</td>
+      <td>Jeremy Clarkson</td>
+      <td>2008-11-14</td>
+      <td>406</td>
+      <td>6,8</td>
+      <td>351</td>
+      <td>satyra</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>13 h 32 min - 20 h 18 min</td>
+      <td>Clarkson, nie zatrzymasz mnie</td>
+      <td>Can't stop me!</td>
+      <td>2008-01-01</td>
+      <td>NaN</td>
+      <td>9788361428053</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/5729/nie-zatrzymasz-mnie</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>14</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/237000/237438/327917-352x500.jpg" width="60" ></td>
+      <td>Przecież nie proszę o wiele...</td>
+      <td>Jeremy Clarkson</td>
+      <td>2014-11-10</td>
+      <td>540</td>
+      <td>6,9</td>
+      <td>338</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>18 h 0 min - 27 h 0 min</td>
+      <td></td>
+      <td>Is It Really Too Much to Ask? The World According to Clarkson Volume Five</td>
+      <td>2014-11-10</td>
+      <td>NaN</td>
+      <td>9788363944643</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/237438/przeciez-nie-prosze-o-wiele</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>15</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/115000/115172/352x500.jpg" width="60" ></td>
+      <td>W czym problem?</td>
+      <td>Jeremy Clarkson</td>
+      <td>2011-11-09</td>
+      <td>360</td>
+      <td>7,0</td>
+      <td>488</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>12 h 0 min - 18 h 0 min</td>
+      <td>felietony</td>
+      <td>How Hard Can It Be?: The World According to Clarkson Volume 4</td>
+      <td>2011-10-01</td>
+      <td>NaN</td>
+      <td>9788361428497</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/115172/w-czym-problem</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>9</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/37000/37242/963719-352x500.jpg" width="60" ></td>
+      <td>Świat według Clarksona</td>
+      <td>Jeremy Clarkson</td>
+      <td>2006-01-01</td>
+      <td>375</td>
+      <td>6,4</td>
+      <td>1979</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>12 h 30 min - 18 h 45 min</td>
+      <td></td>
+      <td>The World According to Clarkson</td>
+      <td>2006-01-01</td>
+      <td>NaN</td>
+      <td>9788360355008</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/37242/swiat-wedlug-clarksona</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/3988000/3988216/534255-352x500.jpg" width="60" ></td>
+      <td>Świat według Clarksona 6. Tak jak mówiłem…</td>
+      <td>Jeremy Clarkson</td>
+      <td>2016-11-09</td>
+      <td>408</td>
+      <td>7,1</td>
+      <td>278</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>13 h 36 min - 20 h 24 min</td>
+      <td>Anglia, Wielka Brytania, Brytyjczycy, felietony, humor, ironia, kultura masowa, motoryzacja, nowoczesność, życie codzienne</td>
+      <td>The World According to Clarkson. As I Was Saying...</td>
+      <td>2016-11-09</td>
+      <td>NaN</td>
+      <td>9788365315786</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/3988216/swiat-wedlug-clarksona-6-tak-jak-mowilem</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>17</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/57000/57158/352x500.jpg" width="60" ></td>
+      <td>Świat według Clarksona, część 3. Na litość boską!</td>
+      <td>Jeremy Clarkson</td>
+      <td>2009-11-12</td>
+      <td>360</td>
+      <td>6,9</td>
+      <td>677</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>12 h 0 min - 18 h 0 min</td>
+      <td>felietony</td>
+      <td>For Crying Out Loud! The World According to Clarkson, volume 3</td>
+      <td>2009-11-12</td>
+      <td>NaN</td>
+      <td>9788361428152</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/57158/swiat-wedlug-clarksona-czesc-3-na-litosc-boska</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>11</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4905000/4905516/770304-352x500.jpg" width="60" ></td>
+      <td>Świat według Clarksona. Jeśli mógłbym dokończyć…</td>
+      <td>Jeremy Clarkson</td>
+      <td>2019-11-13</td>
+      <td>464</td>
+      <td>6,8</td>
+      <td>203</td>
+      <td>satyra</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>15 h 28 min - 23 h 12 min</td>
+      <td></td>
+      <td>World According to Clarkson: If You’d Just Let Me Finish</td>
+      <td>2019-11-13</td>
+      <td>NaN</td>
+      <td>9788366360495</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4905516/swiat-wedlug-clarksona-jesli-moglbym-dokonczyc</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/297000/297376/471670-352x500.jpg" width="60" ></td>
+      <td>Zaraza</td>
+      <td>Jerzy Ambroziewicz</td>
+      <td>2016-03-30</td>
+      <td>280</td>
+      <td>7,1</td>
+      <td>417</td>
+      <td>reportaż</td>
+      <td>Dowody na Istnienie</td>
+      <td>Faktyczny Dom Kultury</td>
+      <td>9 h 20 min - 14 h 0 min</td>
+      <td>ospa, epidemia, reportaż</td>
+      <td>NaN</td>
+      <td>1965-01-01</td>
+      <td>NaN</td>
+      <td>9788394311841</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/297376/zaraza</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>6</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4878000/4878403/718826-352x500.jpg" width="60" ></td>
+      <td>Kod kapitalizmu. Jak Gwiezdne wojny, Coca-Cola i Leo Messi kierują Twoim życiem</td>
+      <td>Marcin Napiórkowski</td>
+      <td>2019-02-22</td>
+      <td>424</td>
+      <td>6,5</td>
+      <td>234</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Krytyka Polityczna</td>
+      <td>NaN</td>
+      <td>14 h 8 min - 21 h 12 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2019-02-22</td>
+      <td>NaN</td>
+      <td>9788366232068</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4878403/kod-kapitalizmu-jak-gwiezdne-wojny-coca-cola-i-leo-messi-kieruja-twoim-zyciem</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>7</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/314000/314041/512702-352x500.jpg" width="60" ></td>
+      <td>Powstanie umarłych. Historia pamięci 1944-2014</td>
+      <td>Marcin Napiórkowski</td>
+      <td>2016-07-29</td>
+      <td>504</td>
+      <td>7,7</td>
+      <td>27</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Krytyka Polityczna</td>
+      <td>NaN</td>
+      <td>16 h 48 min - 25 h 12 min</td>
+      <td>historia, warszawa, powstanie warszawskie, polska, polityka pamięci</td>
+      <td>NaN</td>
+      <td>2016-07-29</td>
+      <td>NaN</td>
+      <td>9788365369246</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/314041/powstanie-umarlych-historia-pamieci-1944-2014</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>4</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4890000/4890328/746943-352x500.jpg" width="60" ></td>
+      <td>Turbopatriotyzm</td>
+      <td>Marcin Napiórkowski</td>
+      <td>2019-08-28</td>
+      <td>320</td>
+      <td>7,2</td>
+      <td>306</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Czarne</td>
+      <td>Nowe non-fiction</td>
+      <td>10 h 40 min - 16 h 0 min</td>
+      <td>literatura polska, socjologia, patriotyzm, polityka</td>
+      <td>NaN</td>
+      <td>2019-08-28</td>
+      <td>NaN</td>
+      <td>9788380499010</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4890328/turbopatriotyzm</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>20</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/163000/163634/497144-352x500.jpg" width="60" ></td>
+      <td>Księgi Jakubowe</td>
+      <td>Olga Tokarczuk</td>
+      <td>2014-10-23</td>
+      <td>912</td>
+      <td>7,8</td>
+      <td>3761</td>
+      <td>powieść historyczna</td>
+      <td>Wydawnictwo Literackie</td>
+      <td>NaN</td>
+      <td>30 h 24 min - 45 h 36 min</td>
+      <td>literatura polska, wielokulturowość, herezja, literatura polska, Podole, powieść historyczna, Rzeczpospolita Obojga Narodów, XVIII w., XVIII w., Żydzi</td>
+      <td>NaN</td>
+      <td>2014-10-23</td>
+      <td>NaN</td>
+      <td>9788308049396</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/163634/ksiegi-jakubowe</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>1</td>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4949000/4949256/861971-352x500.jpg" width="60" ></td>
+      <td>Zachowuj się. Jak biologia wydobywa z nas to, co najgorsze, i to, co najlepsze</td>
+      <td>Robert M. Sapolsky</td>
+      <td>2021-03-10</td>
+      <td>1008</td>
+      <td>9,1</td>
+      <td>98</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Media Rodzina</td>
+      <td>NaN</td>
+      <td>33 h 36 min - 50 h 24 min</td>
+      <td>psychologia, zachowuj się, sapolsky, popularno-naukowe</td>
+      <td>Behave: The Biology of Humans at Our Best and Worst</td>
+      <td>2021-03-10</td>
+      <td>2017-05-02</td>
+      <td>9788380088276</td>
+      <td>polski</td>
+      <td>https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
