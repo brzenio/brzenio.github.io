@@ -15,56 +15,346 @@ table {
 
     }
 
+.headers {
+  position: sticky;
+}
+
 body
 {
   overflow-x:hidden;
 }
+
+tr:hover td{
+  /* Add a grey background color to the table header and on hover */
+  background-color: #b8b8b8;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  background-color:  cyan;
+}
+
+#myInput2 {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  background-color:  lightgreen;
+}
+
 </style>
+<script>
+var Latinise={};Latinise.latin_map={"Á":"A","Ă":"A","Ắ":"A","Ặ":"A","Ằ":"A","Ẳ":"A","Ẵ":"A","Ǎ":"A","Â":"A","Ấ":"A","Ậ":"A","Ầ":"A","Ẩ":"A","Ẫ":"A","Ä":"A","Ǟ":"A","Ȧ":"A","Ǡ":"A","Ạ":"A","Ȁ":"A","À":"A","Ả":"A","Ȃ":"A","Ā":"A","Ą":"A","Å":"A","Ǻ":"A","Ḁ":"A","Ⱥ":"A","Ã":"A","Ꜳ":"AA","Æ":"AE","Ǽ":"AE","Ǣ":"AE","Ꜵ":"AO","Ꜷ":"AU","Ꜹ":"AV","Ꜻ":"AV","Ꜽ":"AY","Ḃ":"B","Ḅ":"B","Ɓ":"B","Ḇ":"B","Ƀ":"B","Ƃ":"B","Ć":"C","Č":"C","Ç":"C","Ḉ":"C","Ĉ":"C","Ċ":"C","Ƈ":"C","Ȼ":"C","Ď":"D","Ḑ":"D","Ḓ":"D","Ḋ":"D","Ḍ":"D","Ɗ":"D","Ḏ":"D","ǲ":"D","ǅ":"D","Đ":"D","Ƌ":"D","Ǳ":"DZ","Ǆ":"DZ","É":"E","Ĕ":"E","Ě":"E","Ȩ":"E","Ḝ":"E","Ê":"E","Ế":"E","Ệ":"E","Ề":"E","Ể":"E","Ễ":"E","Ḙ":"E","Ë":"E","Ė":"E","Ẹ":"E","Ȅ":"E","È":"E","Ẻ":"E","Ȇ":"E","Ē":"E","Ḗ":"E","Ḕ":"E","Ę":"E","Ɇ":"E","Ẽ":"E","Ḛ":"E","Ꝫ":"ET","Ḟ":"F","Ƒ":"F","Ǵ":"G","Ğ":"G","Ǧ":"G","Ģ":"G","Ĝ":"G","Ġ":"G","Ɠ":"G","Ḡ":"G","Ǥ":"G","Ḫ":"H","Ȟ":"H","Ḩ":"H","Ĥ":"H","Ⱨ":"H","Ḧ":"H","Ḣ":"H","Ḥ":"H","Ħ":"H","Í":"I","Ĭ":"I","Ǐ":"I","Î":"I","Ï":"I","Ḯ":"I","İ":"I","Ị":"I","Ȉ":"I","Ì":"I","Ỉ":"I","Ȋ":"I","Ī":"I","Į":"I","Ɨ":"I","Ĩ":"I","Ḭ":"I","Ꝺ":"D","Ꝼ":"F","Ᵹ":"G","Ꞃ":"R","Ꞅ":"S","Ꞇ":"T","Ꝭ":"IS","Ĵ":"J","Ɉ":"J","Ḱ":"K","Ǩ":"K","Ķ":"K","Ⱪ":"K","Ꝃ":"K","Ḳ":"K","Ƙ":"K","Ḵ":"K","Ꝁ":"K","Ꝅ":"K","Ĺ":"L","Ƚ":"L","Ľ":"L","Ļ":"L","Ḽ":"L","Ḷ":"L","Ḹ":"L","Ⱡ":"L","Ꝉ":"L","Ḻ":"L","Ŀ":"L","Ɫ":"L","ǈ":"L","Ł":"L","Ǉ":"LJ","Ḿ":"M","Ṁ":"M","Ṃ":"M","Ɱ":"M","Ń":"N","Ň":"N","Ņ":"N","Ṋ":"N","Ṅ":"N","Ṇ":"N","Ǹ":"N","Ɲ":"N","Ṉ":"N","Ƞ":"N","ǋ":"N","Ñ":"N","Ǌ":"NJ","Ó":"O","Ŏ":"O","Ǒ":"O","Ô":"O","Ố":"O","Ộ":"O","Ồ":"O","Ổ":"O","Ỗ":"O","Ö":"O","Ȫ":"O","Ȯ":"O","Ȱ":"O","Ọ":"O","Ő":"O","Ȍ":"O","Ò":"O","Ỏ":"O","Ơ":"O","Ớ":"O","Ợ":"O","Ờ":"O","Ở":"O","Ỡ":"O","Ȏ":"O","Ꝋ":"O","Ꝍ":"O","Ō":"O","Ṓ":"O","Ṑ":"O","Ɵ":"O","Ǫ":"O","Ǭ":"O","Ø":"O","Ǿ":"O","Õ":"O","Ṍ":"O","Ṏ":"O","Ȭ":"O","Ƣ":"OI","Ꝏ":"OO","Ɛ":"E","Ɔ":"O","Ȣ":"OU","Ṕ":"P","Ṗ":"P","Ꝓ":"P","Ƥ":"P","Ꝕ":"P","Ᵽ":"P","Ꝑ":"P","Ꝙ":"Q","Ꝗ":"Q","Ŕ":"R","Ř":"R","Ŗ":"R","Ṙ":"R","Ṛ":"R","Ṝ":"R","Ȑ":"R","Ȓ":"R","Ṟ":"R","Ɍ":"R","Ɽ":"R","Ꜿ":"C","Ǝ":"E","Ś":"S","Ṥ":"S","Š":"S","Ṧ":"S","Ş":"S","Ŝ":"S","Ș":"S","Ṡ":"S","Ṣ":"S","Ṩ":"S","Ť":"T","Ţ":"T","Ṱ":"T","Ț":"T","Ⱦ":"T","Ṫ":"T","Ṭ":"T","Ƭ":"T","Ṯ":"T","Ʈ":"T","Ŧ":"T","Ɐ":"A","Ꞁ":"L","Ɯ":"M","Ʌ":"V","Ꜩ":"TZ","Ú":"U","Ŭ":"U","Ǔ":"U","Û":"U","Ṷ":"U","Ü":"U","Ǘ":"U","Ǚ":"U","Ǜ":"U","Ǖ":"U","Ṳ":"U","Ụ":"U","Ű":"U","Ȕ":"U","Ù":"U","Ủ":"U","Ư":"U","Ứ":"U","Ự":"U","Ừ":"U","Ử":"U","Ữ":"U","Ȗ":"U","Ū":"U","Ṻ":"U","Ų":"U","Ů":"U","Ũ":"U","Ṹ":"U","Ṵ":"U","Ꝟ":"V","Ṿ":"V","Ʋ":"V","Ṽ":"V","Ꝡ":"VY","Ẃ":"W","Ŵ":"W","Ẅ":"W","Ẇ":"W","Ẉ":"W","Ẁ":"W","Ⱳ":"W","Ẍ":"X","Ẋ":"X","Ý":"Y","Ŷ":"Y","Ÿ":"Y","Ẏ":"Y","Ỵ":"Y","Ỳ":"Y","Ƴ":"Y","Ỷ":"Y","Ỿ":"Y","Ȳ":"Y","Ɏ":"Y","Ỹ":"Y","Ź":"Z","Ž":"Z","Ẑ":"Z","Ⱬ":"Z","Ż":"Z","Ẓ":"Z","Ȥ":"Z","Ẕ":"Z","Ƶ":"Z","Ĳ":"IJ","Œ":"OE","ᴀ":"A","ᴁ":"AE","ʙ":"B","ᴃ":"B","ᴄ":"C","ᴅ":"D","ᴇ":"E","ꜰ":"F","ɢ":"G","ʛ":"G","ʜ":"H","ɪ":"I","ʁ":"R","ᴊ":"J","ᴋ":"K","ʟ":"L","ᴌ":"L","ᴍ":"M","ɴ":"N","ᴏ":"O","ɶ":"OE","ᴐ":"O","ᴕ":"OU","ᴘ":"P","ʀ":"R","ᴎ":"N","ᴙ":"R","ꜱ":"S","ᴛ":"T","ⱻ":"E","ᴚ":"R","ᴜ":"U","ᴠ":"V","ᴡ":"W","ʏ":"Y","ᴢ":"Z","á":"a","ă":"a","ắ":"a","ặ":"a","ằ":"a","ẳ":"a","ẵ":"a","ǎ":"a","â":"a","ấ":"a","ậ":"a","ầ":"a","ẩ":"a","ẫ":"a","ä":"a","ǟ":"a","ȧ":"a","ǡ":"a","ạ":"a","ȁ":"a","à":"a","ả":"a","ȃ":"a","ā":"a","ą":"a","ᶏ":"a","ẚ":"a","å":"a","ǻ":"a","ḁ":"a","ⱥ":"a","ã":"a","ꜳ":"aa","æ":"ae","ǽ":"ae","ǣ":"ae","ꜵ":"ao","ꜷ":"au","ꜹ":"av","ꜻ":"av","ꜽ":"ay","ḃ":"b","ḅ":"b","ɓ":"b","ḇ":"b","ᵬ":"b","ᶀ":"b","ƀ":"b","ƃ":"b","ɵ":"o","ć":"c","č":"c","ç":"c","ḉ":"c","ĉ":"c","ɕ":"c","ċ":"c","ƈ":"c","ȼ":"c","ď":"d","ḑ":"d","ḓ":"d","ȡ":"d","ḋ":"d","ḍ":"d","ɗ":"d","ᶑ":"d","ḏ":"d","ᵭ":"d","ᶁ":"d","đ":"d","ɖ":"d","ƌ":"d","ı":"i","ȷ":"j","ɟ":"j","ʄ":"j","ǳ":"dz","ǆ":"dz","é":"e","ĕ":"e","ě":"e","ȩ":"e","ḝ":"e","ê":"e","ế":"e","ệ":"e","ề":"e","ể":"e","ễ":"e","ḙ":"e","ë":"e","ė":"e","ẹ":"e","ȅ":"e","è":"e","ẻ":"e","ȇ":"e","ē":"e","ḗ":"e","ḕ":"e","ⱸ":"e","ę":"e","ᶒ":"e","ɇ":"e","ẽ":"e","ḛ":"e","ꝫ":"et","ḟ":"f","ƒ":"f","ᵮ":"f","ᶂ":"f","ǵ":"g","ğ":"g","ǧ":"g","ģ":"g","ĝ":"g","ġ":"g","ɠ":"g","ḡ":"g","ᶃ":"g","ǥ":"g","ḫ":"h","ȟ":"h","ḩ":"h","ĥ":"h","ⱨ":"h","ḧ":"h","ḣ":"h","ḥ":"h","ɦ":"h","ẖ":"h","ħ":"h","ƕ":"hv","í":"i","ĭ":"i","ǐ":"i","î":"i","ï":"i","ḯ":"i","ị":"i","ȉ":"i","ì":"i","ỉ":"i","ȋ":"i","ī":"i","į":"i","ᶖ":"i","ɨ":"i","ĩ":"i","ḭ":"i","ꝺ":"d","ꝼ":"f","ᵹ":"g","ꞃ":"r","ꞅ":"s","ꞇ":"t","ꝭ":"is","ǰ":"j","ĵ":"j","ʝ":"j","ɉ":"j","ḱ":"k","ǩ":"k","ķ":"k","ⱪ":"k","ꝃ":"k","ḳ":"k","ƙ":"k","ḵ":"k","ᶄ":"k","ꝁ":"k","ꝅ":"k","ĺ":"l","ƚ":"l","ɬ":"l","ľ":"l","ļ":"l","ḽ":"l","ȴ":"l","ḷ":"l","ḹ":"l","ⱡ":"l","ꝉ":"l","ḻ":"l","ŀ":"l","ɫ":"l","ᶅ":"l","ɭ":"l","ł":"l","ǉ":"lj","ſ":"s","ẜ":"s","ẛ":"s","ẝ":"s","ḿ":"m","ṁ":"m","ṃ":"m","ɱ":"m","ᵯ":"m","ᶆ":"m","ń":"n","ň":"n","ņ":"n","ṋ":"n","ȵ":"n","ṅ":"n","ṇ":"n","ǹ":"n","ɲ":"n","ṉ":"n","ƞ":"n","ᵰ":"n","ᶇ":"n","ɳ":"n","ñ":"n","ǌ":"nj","ó":"o","ŏ":"o","ǒ":"o","ô":"o","ố":"o","ộ":"o","ồ":"o","ổ":"o","ỗ":"o","ö":"o","ȫ":"o","ȯ":"o","ȱ":"o","ọ":"o","ő":"o","ȍ":"o","ò":"o","ỏ":"o","ơ":"o","ớ":"o","ợ":"o","ờ":"o","ở":"o","ỡ":"o","ȏ":"o","ꝋ":"o","ꝍ":"o","ⱺ":"o","ō":"o","ṓ":"o","ṑ":"o","ǫ":"o","ǭ":"o","ø":"o","ǿ":"o","õ":"o","ṍ":"o","ṏ":"o","ȭ":"o","ƣ":"oi","ꝏ":"oo","ɛ":"e","ᶓ":"e","ɔ":"o","ᶗ":"o","ȣ":"ou","ṕ":"p","ṗ":"p","ꝓ":"p","ƥ":"p","ᵱ":"p","ᶈ":"p","ꝕ":"p","ᵽ":"p","ꝑ":"p","ꝙ":"q","ʠ":"q","ɋ":"q","ꝗ":"q","ŕ":"r","ř":"r","ŗ":"r","ṙ":"r","ṛ":"r","ṝ":"r","ȑ":"r","ɾ":"r","ᵳ":"r","ȓ":"r","ṟ":"r","ɼ":"r","ᵲ":"r","ᶉ":"r","ɍ":"r","ɽ":"r","ↄ":"c","ꜿ":"c","ɘ":"e","ɿ":"r","ś":"s","ṥ":"s","š":"s","ṧ":"s","ş":"s","ŝ":"s","ș":"s","ṡ":"s","ṣ":"s","ṩ":"s","ʂ":"s","ᵴ":"s","ᶊ":"s","ȿ":"s","ɡ":"g","ᴑ":"o","ᴓ":"o","ᴝ":"u","ť":"t","ţ":"t","ṱ":"t","ț":"t","ȶ":"t","ẗ":"t","ⱦ":"t","ṫ":"t","ṭ":"t","ƭ":"t","ṯ":"t","ᵵ":"t","ƫ":"t","ʈ":"t","ŧ":"t","ᵺ":"th","ɐ":"a","ᴂ":"ae","ǝ":"e","ᵷ":"g","ɥ":"h","ʮ":"h","ʯ":"h","ᴉ":"i","ʞ":"k","ꞁ":"l","ɯ":"m","ɰ":"m","ᴔ":"oe","ɹ":"r","ɻ":"r","ɺ":"r","ⱹ":"r","ʇ":"t","ʌ":"v","ʍ":"w","ʎ":"y","ꜩ":"tz","ú":"u","ŭ":"u","ǔ":"u","û":"u","ṷ":"u","ü":"u","ǘ":"u","ǚ":"u","ǜ":"u","ǖ":"u","ṳ":"u","ụ":"u","ű":"u","ȕ":"u","ù":"u","ủ":"u","ư":"u","ứ":"u","ự":"u","ừ":"u","ử":"u","ữ":"u","ȗ":"u","ū":"u","ṻ":"u","ų":"u","ᶙ":"u","ů":"u","ũ":"u","ṹ":"u","ṵ":"u","ᵫ":"ue","ꝸ":"um","ⱴ":"v","ꝟ":"v","ṿ":"v","ʋ":"v","ᶌ":"v","ⱱ":"v","ṽ":"v","ꝡ":"vy","ẃ":"w","ŵ":"w","ẅ":"w","ẇ":"w","ẉ":"w","ẁ":"w","ⱳ":"w","ẘ":"w","ẍ":"x","ẋ":"x","ᶍ":"x","ý":"y","ŷ":"y","ÿ":"y","ẏ":"y","ỵ":"y","ỳ":"y","ƴ":"y","ỷ":"y","ỿ":"y","ȳ":"y","ẙ":"y","ɏ":"y","ỹ":"y","ź":"z","ž":"z","ẑ":"z","ʑ":"z","ⱬ":"z","ż":"z","ẓ":"z","ȥ":"z","ẕ":"z","ᵶ":"z","ᶎ":"z","ʐ":"z","ƶ":"z","ɀ":"z","ﬀ":"ff","ﬃ":"ffi","ﬄ":"ffl","ﬁ":"fi","ﬂ":"fl","ĳ":"ij","œ":"oe","ﬆ":"st","ₐ":"a","ₑ":"e","ᵢ":"i","ⱼ":"j","ₒ":"o","ᵣ":"r","ᵤ":"u","ᵥ":"v","ₓ":"x"};
+String.prototype.latinise=function(){return this.replace(/[^A-Za-z0-9\[\] ]/g,function(a){return Latinise.latin_map[a]||a})};
+String.prototype.latinize=String.prototype.latinise;
+String.prototype.isLatin=function(){return this==this.latinise()}
+</script>
+
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, string_norm, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+
+  //string_norm = input.normalize('NFD').replace(/\p{Diacritic}/gu, ""); // Old method: .replace(/[\u0300-\u036f]/g, ""); Wyszukuje bez znakow diakrytycznych
+  //string_norm = input.latinise();
+  //string_norm = input.latinise();
+  filter = input.value.toUpperCase().latinise();
+  table = document.getElementById("books");
+  tr = table.getElementsByTagName("tr");
+
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().latinise().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+    }
+  }
+}
+</script>
+
+<script>
+  function myFunction2() {
+  // Declare variables
+  var input, string_norm, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput2");
+
+  //string_norm = input.normalize('NFD').replace(/\p{Diacritic}/gu, ""); // Old method: .replace(/[\u0300-\u036f]/g, ""); Wyszukuje bez znakow diakrytycznych
+
+  filter = input.value.toUpperCase().latinise();
+  table = document.getElementById("books");
+  tr = table.getElementsByTagName("tr");
+
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().latinise().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+    }
+  }
+}
+
+</script>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("books");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <title>bootstrap</title>
+        <title>Lista książek</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
 <body style="overflow-x:hidden;">
-  <div style="overflow:auto">
-  <table class="table table-striped">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">Lista książek</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Zarejestruj się</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users">Użytkownicy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/allpass">Wszystkie hasła</a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wpisz tytuł książki...">
+ <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Lub wpisz autora...">
+
+<!-- <th onclick="sortTable(1)"></th> -->
+  <div style="overflow:scroll">
+  <table class="table table-striped" id="books">
   <thead>
-    <tr style="text-align: right;">
+    <tr class="headers" style="text-align: right;">
       <th></th>
-      <th>index</th>
-      <th>image</th>
-      <th>book_title</th>
-      <th>name</th>
-      <th>datePublished</th>
-      <th>numberOfPages</th>
-      <th>ratingValue</th>
-      <th>ratingCount</th>
-      <th>category</th>
-      <th>publisher</th>
-      <th>series</th>
-      <th>readingTime</th>
-      <th>tags</th>
-      <th>originalTitle</th>
-      <th>firstPolishPublish</th>
-      <th>originPublish</th>
-      <th>isbn</th>
-      <th>inLanguage</th>
-      <th>url</th>
+      <th>Okładka</th>
+      <th>Tytuł</th>
+      <th>Autor</th>
+      <th>Data Publikacji</th>
+      <th>Liczba stron</th>
+      <th>Ocena</th>
+      <th>Liczba ocen</th>
+      <th>Kategoria</th>
+      <th>Wydawnictwo</th>
+      <th>Seria</th>
+      <th>Czas czytania</th>
+      <th>Tagi</th>
+      <th>Tytuł oryginału</th>
+      <th>Pierwsze wydanie pol.</th>
+      <th>Pierwsze wydanie oryg.</th>
+      <th>ISBN</th>
+      <th>Język</th>
+      <th>URL</th>
     </tr>
   </thead>
-  <tbody>
+    </tr>
+  </thead>
+ <tbody>
     <tr>
-      <th>0</th>
-      <td>5</td>
+      <th>1</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/160000/160661/352x500.jpg" width="60" ></td>
+      <td>ARPS. Architektura Arseniusza Romanowicza i Piotra Szymaniaka</td>
+      <td>praca zbiorowa</td>
+      <td>2012-12-05</td>
+      <td>392</td>
+      <td>7,7</td>
+      <td>13</td>
+      <td>sztuka</td>
+      <td>Centrum Architektury</td>
+      <td>NaN</td>
+      <td>13 h 4 min - 19 h 36 min</td>
+      <td>architektura, Warszawa, kolej</td>
+      <td>NaN</td>
+      <td>2012-12-05</td>
+      <td>NaN</td>
+      <td>978-83-934574-1-0</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/160661/arps-architektura-arseniusza-romanowicza-i-piotra-szymaniaka">https://lubimyczytac.pl/ksiazka/160661/arps-architektura-arseniusza-romanowicza-i-piotra-szymaniaka</a></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4871000/4871397/705928-352x500.jpg" width="60" ></td>
+      <td>Fenomen Szwajcarii wobec Unii Europejskiej</td>
+      <td>praca zbiorowa</td>
+      <td>2009-01-01</td>
+      <td>204</td>
+      <td>6,0</td>
+      <td>1</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Semper</td>
+      <td>NaN</td>
+      <td>6 h 48 min - 10 h 12 min</td>
+      <td>Szwajcaria, Szwajcarzy, Konfederacja Szwajcarska, Unia Europejska, integracja europejska, demokracja bezpośrednia, Helvetia, Suisse, Schweiz, Svizzera, Svizra</td>
+      <td>NaN</td>
+      <td>2009-01-01</td>
+      <td>NaN</td>
+      <td>9788375071054</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4871397/fenomen-szwajcarii-wobec-unii-europejskiej">https://lubimyczytac.pl/ksiazka/4871397/fenomen-szwajcarii-wobec-unii-europejskiej</a></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/196000/196817/196217-352x500.jpg" width="60" ></td>
+      <td>Kuchnia ormiańska</td>
+      <td>praca zbiorowa</td>
+      <td>1987-01-01</td>
+      <td>240</td>
+      <td>7,0</td>
+      <td>1</td>
+      <td>kulinaria, przepisy kulinarne</td>
+      <td>Państwowe Wydawnictwo Rolnicze i Leśne</td>
+      <td>NaN</td>
+      <td>8 h 0 min - 12 h 0 min</td>
+      <td>Armenia, kuchnia armeńska, kuchnia ormiańska, kulinaria, potrawy, przepisy</td>
+      <td>Armianskaja kulinaria</td>
+      <td>1987-01-01</td>
+      <td>NaN</td>
+      <td>8309012055</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/196817/kuchnia-ormianska">https://lubimyczytac.pl/ksiazka/196817/kuchnia-ormianska</a></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4886000/4886042/733463-352x500.jpg" width="60" ></td>
+      <td>Szybcy jak diabli. Rywalizacja Forda i Ferrari o zwycięstwo w wielkim wyścigu w Le Mans</td>
+      <td>A. J. Baime</td>
+      <td>2019-06-17</td>
+      <td>400</td>
+      <td>7,7</td>
+      <td>74</td>
+      <td>motoryzacja</td>
+      <td>Znak Literanova</td>
+      <td>NaN</td>
+      <td>13 h 20 min - 20 h 0 min</td>
+      <td>wyścigi, le mans, ford, ferrari</td>
+      <td>Go Like Hell: Ford, Ferrari, and Their Battle for Speed and Glory at Le Mans</td>
+      <td>2019-06-17</td>
+      <td>NaN</td>
+      <td>9788324049127</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4886042/szybcy-jak-diabli-rywalizacja-forda-i-ferrari-o-zwyciestwo-w-wielkim-wyscigu-w-le-mans">https://lubimyczytac.pl/ksiazka/4886042/szybcy-jak-diabli-rywalizacja-forda-i-ferrari-o-zwyciestwo-w-wielkim-wyscigu-w-le-mans</a></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4952000/4952609/868346-352x500.jpg" width="60" ></td>
+      <td>Szwajcaria. Podróż przez raj wymyślony</td>
+      <td>Agnieszka Kamińska</td>
+      <td>2021-02-10</td>
+      <td>320</td>
+      <td>6,9</td>
+      <td>341</td>
+      <td>reportaż</td>
+      <td>Wydawnictwo Poznańskie</td>
+      <td>NaN</td>
+      <td>10 h 40 min - 16 h 0 min</td>
+      <td>Literatura polska, Szwajcaria, Szwajcarzy, reportaż, Konfederacja szwajcarska, Polacy za granicą, emigracja</td>
+      <td>NaN</td>
+      <td>2021-02-10</td>
+      <td>NaN</td>
+      <td>9788366736450</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4952609/szwajcaria-podroz-przez-raj-wymyslony">https://lubimyczytac.pl/ksiazka/4952609/szwajcaria-podroz-przez-raj-wymyslony</a></td>
+    </tr>
+    <tr>
+      <th>6</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4889000/4889761/740089-352x500.jpg" width="60" ></td>
       <td>Wędrowny Zakład Fotograficzny</td>
       <td>Agnieszka Pajączkowska</td>
       <td>2019-08-14</td>
       <td>384</td>
-      <td>8,0</td>
-      <td>545</td>
+      <td>7,9</td>
+      <td>548</td>
       <td>reportaż</td>
       <td>Czarne</td>
       <td>Poza serią</td>
@@ -75,18 +365,521 @@ body
       <td>NaN</td>
       <td>9788380498921</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4889761/wedrowny-zaklad-fotograficzny</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4889761/wedrowny-zaklad-fotograficzny">https://lubimyczytac.pl/ksiazka/4889761/wedrowny-zaklad-fotograficzny</a></td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>8</td>
+      <th>7</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/141000/141034/352x500.jpg" width="60" ></td>
+      <td>Drzwi percepcji. Niebo i piekło</td>
+      <td>Aldous Huxley</td>
+      <td>2012-04-01</td>
+      <td>142</td>
+      <td>7,0</td>
+      <td>1123</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Wydawnictwo Cień Kształtu</td>
+      <td>NaN</td>
+      <td>4 h 44 min - 7 h 6 min</td>
+      <td>meskalina, lsd, narkotyki, psychodeliki, halucynacje, eksperyment, podróż, hippisi, the doors, filozofia</td>
+      <td>The Doors Of Perception. Heaven And Hell</td>
+      <td>1991-01-01</td>
+      <td>1969-01-01</td>
+      <td>9788360685150</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/141034/drzwi-percepcji-niebo-i-pieklo">https://lubimyczytac.pl/ksiazka/141034/drzwi-percepcji-niebo-i-pieklo</a></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/74000/74555/574193-352x500.jpg" width="60" ></td>
+      <td>Nowy wspaniały świat</td>
+      <td>Aldous Huxley</td>
+      <td>2010-01-01</td>
+      <td>256</td>
+      <td>7,7</td>
+      <td>20851</td>
+      <td>fantasy, science fiction</td>
+      <td>Muza</td>
+      <td>NaN</td>
+      <td>8 h 32 min - 12 h 48 min</td>
+      <td>antyutopia</td>
+      <td>Brave New World</td>
+      <td>1933-01-01</td>
+      <td>1932-01-01</td>
+      <td>9788328707092</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/74555/nowy-wspanialy-swiat">https://lubimyczytac.pl/ksiazka/74555/nowy-wspanialy-swiat</a></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4848000/4848863/663179-352x500.jpg" width="60" ></td>
+      <td>Nowy wspaniały świat 30 lat później. Raport rozbieżności</td>
+      <td>Aldous Huxley</td>
+      <td>2018-05-23</td>
+      <td>189</td>
+      <td>7,2</td>
+      <td>243</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Muza</td>
+      <td>NaN</td>
+      <td>6 h 18 min - 9 h 27 min</td>
+      <td>Radosław Madejski</td>
+      <td>Brave New World Revisited (1958)</td>
+      <td>2018-05-23</td>
+      <td>NaN</td>
+      <td>9788328709850</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4848863/nowy-wspanialy-swiat-30-lat-pozniej-raport-rozbieznosci">https://lubimyczytac.pl/ksiazka/4848863/nowy-wspanialy-swiat-30-lat-pozniej-raport-rozbieznosci</a></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4946000/4946698/857021-352x500.jpg" width="60" ></td>
+      <td>Codzienność nudy. Dom jako przestrzeń produktywna i nieproduktywna</td>
+      <td>Aleksandra Gordowy</td>
+      <td>2020-07-10</td>
+      <td>NaN</td>
+      <td>7,4</td>
+      <td>14</td>
+      <td>filozofia, etyka</td>
+      <td>Fundacja Bęc Zmiana</td>
+      <td>NaN</td>
+      <td></td>
+      <td></td>
+      <td>Codzienność nudy. Dom jako przestrzeń produktywna i nieproduktywna</td>
+      <td>2020-07-10</td>
+      <td>NaN</td>
+      <td>9788366082083</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4946698/codziennosc-nudy-dom-jako-przestrzen-produktywna-i-nieproduktywna">https://lubimyczytac.pl/ksiazka/4946698/codziennosc-nudy-dom-jako-przestrzen-produktywna-i-nieproduktywna</a></td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4914000/4914195/972921-352x500.jpg" width="60" ></td>
+      <td>Pokaż mi swoją bibliotekę</td>
+      <td>Aleksandra Rybka</td>
+      <td>2020-04-13</td>
+      <td>350</td>
+      <td>6,6</td>
+      <td>160</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Znak</td>
+      <td>NaN</td>
+      <td>11 h 40 min - 17 h 30 min</td>
+      <td>biblioteka, bibliofile, układanie książek, wywiady, pisarze</td>
+      <td>NaN</td>
+      <td>2020-04-13</td>
+      <td>NaN</td>
+      <td>9788324060207</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4914195/pokaz-mi-swoja-biblioteke">https://lubimyczytac.pl/ksiazka/4914195/pokaz-mi-swoja-biblioteke</a></td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4914000/4914319/788387-352x500.jpg" width="60" ></td>
+      <td>Tragedia na przełęczy Diatłowa. Historia bez końca</td>
+      <td>Alice Lugen</td>
+      <td>2020-04-15</td>
+      <td>280</td>
+      <td>7,6</td>
+      <td>1929</td>
+      <td>reportaż</td>
+      <td>Czarne</td>
+      <td>Poza serią</td>
+      <td>9 h 20 min - 14 h 0 min</td>
+      <td>literatura polska, góry, śmierć, rosja, zsrr</td>
+      <td>NaN</td>
+      <td>2020-04-15</td>
+      <td>NaN</td>
+      <td>9788380499997</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4914319/tragedia-na-przeleczy-diatlowa-historia-bez-konca">https://lubimyczytac.pl/ksiazka/4914319/tragedia-na-przeleczy-diatlowa-historia-bez-konca</a></td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/235000/235716/324070-352x500.jpg" width="60" ></td>
+      <td>Marsjanin</td>
+      <td>Andy Weir</td>
+      <td>2014-11-19</td>
+      <td>384</td>
+      <td>7,8</td>
+      <td>9775</td>
+      <td>fantasy, science fiction</td>
+      <td>Akurat</td>
+      <td>NaN</td>
+      <td>12 h 48 min - 19 h 12 min</td>
+      <td>kosmos, Mars, Marcin Ring, surwival, przetrwanie, literatura amerykańska</td>
+      <td>The Martian</td>
+      <td>2014-01-01</td>
+      <td>2012-09-23</td>
+      <td>9788328705326</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/235716/marsjanin">https://lubimyczytac.pl/ksiazka/235716/marsjanin</a></td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4943000/4943173/882012-352x500.jpg" width="60" ></td>
+      <td>Piknik na skraju drogi i inne utwory</td>
+      <td>Arkadij Strugacki</td>
+      <td>2021-01-21</td>
+      <td>912</td>
+      <td>7,6</td>
+      <td>149</td>
+      <td>fantasy, science fiction</td>
+      <td>Prószyński i S-ka</td>
+      <td>NaN</td>
+      <td>30 h 24 min - 45 h 36 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2021-01-21</td>
+      <td>NaN</td>
+      <td>9788381693776</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4943173/piknik-na-skraju-drogi-i-inne-utwory">https://lubimyczytac.pl/ksiazka/4943173/piknik-na-skraju-drogi-i-inne-utwory</a></td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/293000/293762/515654-352x500.jpg" width="60" ></td>
+      <td>Dzieci z Bullerbyn</td>
+      <td>Astrid Lindgren</td>
+      <td>2016-03-16</td>
+      <td>296</td>
+      <td>7,5</td>
+      <td>27338</td>
+      <td>literatura dziecięca</td>
+      <td>Nasza Księgarnia</td>
+      <td>NaN</td>
+      <td>9 h 52 min - 14 h 48 min</td>
+      <td>Bullerbyn, Lasse, Bosse, Olle, Lisa, Anna, Britta, lektura szkolna</td>
+      <td>Bullerbyboken</td>
+      <td>1961-01-01</td>
+      <td>1988-01-01</td>
+      <td>9788310129659</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/293762/dzieci-z-bullerbyn">https://lubimyczytac.pl/ksiazka/293762/dzieci-z-bullerbyn</a></td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/256000/256836/387546-352x500.jpg" width="60" ></td>
+      <td>Pałac. Biografia intymna</td>
+      <td>Beata Chomątowska</td>
+      <td>2015-07-13</td>
+      <td>416</td>
+      <td>6,3</td>
+      <td>138</td>
+      <td>literatura piękna</td>
+      <td>Znak</td>
+      <td>NaN</td>
+      <td>13 h 52 min - 20 h 48 min</td>
+      <td>literatura polska</td>
+      <td>NaN</td>
+      <td>2015-07-13</td>
+      <td>NaN</td>
+      <td>9788324034949</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/256836/palac-biografia-intymna">https://lubimyczytac.pl/ksiazka/256836/palac-biografia-intymna</a></td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4916000/4916710/793738-352x500.jpg" width="60" ></td>
+      <td>Tak dziś jemy. Biografia jedzenia</td>
+      <td>Bee Wilson</td>
+      <td>2020-03-11</td>
+      <td>496</td>
+      <td>7,3</td>
+      <td>286</td>
+      <td>reportaż</td>
+      <td>Sine Qua Non</td>
+      <td>NaN</td>
+      <td>16 h 32 min - 24 h 48 min</td>
+      <td>gastronomia, kulinaria, jedzenie, żywność, dieta, superfood, fast food</td>
+      <td>The Way We Eat Now</td>
+      <td>2020-03-11</td>
+      <td>NaN</td>
+      <td>9788381296533</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4916710/tak-dzis-jemy-biografia-jedzenia">https://lubimyczytac.pl/ksiazka/4916710/tak-dzis-jemy-biografia-jedzenia</a></td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/7000/7176/950088-352x500.jpg" width="60" ></td>
+      <td>Ryszard Kukliński. Życie ściśle tajne</td>
+      <td>Benjamin Weiser</td>
+      <td>2009-01-26</td>
+      <td>328</td>
+      <td>7,4</td>
+      <td>233</td>
+      <td>powieść historyczna</td>
+      <td>Świat Książki</td>
+      <td>NaN</td>
+      <td>10 h 56 min - 16 h 24 min</td>
+      <td>wywiad, Ryszard Kukliński, CIA</td>
+      <td>A Secret Life</td>
+      <td>2005-02-07</td>
+      <td>NaN</td>
+      <td>9788324715244</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/7176/ryszard-kuklinski-zycie-scisle-tajne">https://lubimyczytac.pl/ksiazka/7176/ryszard-kuklinski-zycie-scisle-tajne</a></td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/115000/115198/352x500.jpg" width="60" ></td>
+      <td>Niestety wszyscy się znamy</td>
+      <td>Bohdan Smoleń</td>
+      <td>2011-10-03</td>
+      <td>264</td>
+      <td>6,9</td>
+      <td>322</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Otwarte</td>
+      <td>NaN</td>
+      <td>8 h 48 min - 13 h 12 min</td>
+      <td>Bohdan Smoleń, biografia</td>
+      <td>NaN</td>
+      <td>2011-10-03</td>
+      <td>NaN</td>
+      <td>978-83-7515-183-1</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/115198/niestety-wszyscy-sie-znamy">https://lubimyczytac.pl/ksiazka/115198/niestety-wszyscy-sie-znamy</a></td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/47000/47662/352x500.jpg" width="60" ></td>
+      <td>My, dzieci z dworca ZOO</td>
+      <td>Christiane Felscherinow</td>
+      <td>1987-01-01</td>
+      <td>244</td>
+      <td>7,5</td>
+      <td>28655</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Wydawnictwo Iskry</td>
+      <td>NaN</td>
+      <td>8 h 8 min - 12 h 12 min</td>
+      <td>narkotyki, literatura młodzieżowa, narkomania, uzależnienia, młodzież, dzieci, Berlin, Niemcy</td>
+      <td>Wir Kinder Vom Bahnhof Zoo</td>
+      <td>1987-01-01</td>
+      <td>NaN</td>
+      <td>832070801X</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/47662/my-dzieci-z-dworca-zoo">https://lubimyczytac.pl/ksiazka/47662/my-dzieci-z-dworca-zoo</a></td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/154000/154212/749591-352x500.jpg" width="60" ></td>
+      <td>Pułapki myślenia. O myśleniu szybkim i wolnym</td>
+      <td>Daniel Kahneman</td>
+      <td>2012-11-07</td>
+      <td>667</td>
+      <td>8,0</td>
+      <td>2487</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Media Rodzina</td>
+      <td>NaN</td>
+      <td>22 h 14 min - 33 h 21 min</td>
+      <td>psychologia społeczna, błędy poznawcze, heurystyka</td>
+      <td>Thinking, Fast and Slow</td>
+      <td>2012-01-01</td>
+      <td>2011-01-01</td>
+      <td>9788372787873</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/154212/pulapki-myslenia-o-mysleniu-szybkim-i-wolnym">https://lubimyczytac.pl/ksiazka/154212/pulapki-myslenia-o-mysleniu-szybkim-i-wolnym</a></td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/312000/312912/509108-352x500.jpg" width="60" ></td>
+      <td>Rzekomo fajna rzecz, której nigdy więcej nie zrobię</td>
+      <td>David Foster Wallace</td>
+      <td>2016-09-28</td>
+      <td>480</td>
+      <td>6,8</td>
+      <td>241</td>
+      <td>literatura piękna</td>
+      <td>W.A.B.</td>
+      <td>NaN</td>
+      <td>16 h 0 min - 24 h 0 min</td>
+      <td>Jolanta Kozak</td>
+      <td>A Supposedly Fun Thing I’ll Never Do Again</td>
+      <td>2016-09-28</td>
+      <td>NaN</td>
+      <td>9788328027442</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/312912/rzekomo-fajna-rzecz-ktorej-nigdy-wiecej-nie-zrobie">https://lubimyczytac.pl/ksiazka/312912/rzekomo-fajna-rzecz-ktorej-nigdy-wiecej-nie-zrobie</a></td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4308000/4308457/550586-352x500.jpg" width="60" ></td>
+      <td>Język miast</td>
+      <td>Deyan Sudjic</td>
+      <td>2017-04-24</td>
+      <td>280</td>
+      <td>6,5</td>
+      <td>95</td>
+      <td>popularnonaukowa</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td>9 h 20 min - 14 h 0 min</td>
+      <td>architektura, urbanistyka, miasto</td>
+      <td>The Language of Cities</td>
+      <td>2017-04-24</td>
+      <td>NaN</td>
+      <td>9788365271419</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4308457/jezyk-miast">https://lubimyczytac.pl/ksiazka/4308457/jezyk-miast</a></td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/189000/189696/172833-352x500.jpg" width="60" ></td>
+      <td>Język rzeczy. W jaki sposób przedmioty nas uwodzą?</td>
+      <td>Deyan Sudjic</td>
+      <td>2013-09-10</td>
+      <td>252</td>
+      <td>6,7</td>
+      <td>395</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td>8 h 24 min - 12 h 36 min</td>
+      <td>dizajn, fetysz, archetyp, rzecz, przedmiot</td>
+      <td>The Language of Things: Understanding the World of Desirable Objects</td>
+      <td>2013-09-10</td>
+      <td>NaN</td>
+      <td>9788362376292</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/189696/jezyk-rzeczy-w-jaki-sposob-przedmioty-nas-uwodza">https://lubimyczytac.pl/ksiazka/189696/jezyk-rzeczy-w-jaki-sposob-przedmioty-nas-uwodza</a></td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4930000/4930525/823006-352x500.jpg" width="60" ></td>
+      <td>Sto dwadzieścia dni Sodomy, czyli szkoła libertynizmu</td>
+      <td>Donatien Alphonse François de Sade</td>
+      <td>2020-06-12</td>
+      <td>472</td>
+      <td>5,5</td>
+      <td>727</td>
+      <td>klasyka</td>
+      <td>Vis-á-Vis/Etiuda</td>
+      <td>NaN</td>
+      <td>15 h 44 min - 23 h 36 min</td>
+      <td>120 dni sodomy, powieść francuska, powieść erotyczna, libertynizm</td>
+      <td>Cent vingt journées de Sodome ou l'École du libertinage</td>
+      <td>1992-01-01</td>
+      <td>NaN</td>
+      <td>9788379982554</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4930525/sto-dwadziescia-dni-sodomy-czyli-szkola-libertynizmu">https://lubimyczytac.pl/ksiazka/4930525/sto-dwadziescia-dni-sodomy-czyli-szkola-libertynizmu</a></td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4999000/4999291/954724-352x500.jpg" width="60" ></td>
+      <td>Atlas lądów niebyłych. Największe mity, zmyślenia i pomyłki kartografów</td>
+      <td>Edward Brooke-Hitching</td>
+      <td>2021-09-21</td>
+      <td>256</td>
+      <td>7,5</td>
+      <td>165</td>
+      <td>historia</td>
+      <td>Rebis</td>
+      <td>X-Varia</td>
+      <td>8 h 32 min - 12 h 48 min</td>
+      <td></td>
+      <td>The Phantom Atlas: The Greatest Myths, Lies and Blunders on Maps</td>
+      <td>2017-09-12</td>
+      <td>NaN</td>
+      <td>9788381882941</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4999291/atlas-ladow-niebylych-najwieksze-mity-zmyslenia-i-pomylki-kartografow">https://lubimyczytac.pl/ksiazka/4999291/atlas-ladow-niebylych-najwieksze-mity-zmyslenia-i-pomylki-kartografow</a></td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4928000/4928498/819152-352x500.jpg" width="60" ></td>
+      <td>13 pięter</td>
+      <td>Filip Springer</td>
+      <td>2020-05-21</td>
+      <td>304</td>
+      <td>7,8</td>
+      <td>3097</td>
+      <td>reportaż</td>
+      <td>Karakter</td>
+      <td>Poza serią</td>
+      <td>10 h 8 min - 15 h 12 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2015-08-12</td>
+      <td>NaN</td>
+      <td>9788366147515</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4928498/13-pieter">https://lubimyczytac.pl/ksiazka/4928498/13-pieter</a></td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/5027000/5027576/1001065-352x500.jpg" width="60" ></td>
+      <td>Miedzianka. Historia znikania</td>
+      <td>Filip Springer</td>
+      <td>2022-09-08</td>
+      <td>304</td>
+      <td>7,7</td>
+      <td>2812</td>
+      <td>reportaż</td>
+      <td>Karakter</td>
+      <td>Reportaż</td>
+      <td>10 h 8 min - 15 h 12 min</td>
+      <td>Coppferberge, Kopferberg, Kupferberg, Miedzianka, tajemnica, komunizm, zniknięcie, niepamięć, kopalnie</td>
+      <td>NaN</td>
+      <td>2011-10-26</td>
+      <td>NaN</td>
+      <td>9788367016346</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/5027576/miedzianka-historia-znikania">https://lubimyczytac.pl/ksiazka/5027576/miedzianka-historia-znikania</a></td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4807000/4807144/597965-352x500.jpg" width="60" ></td>
+      <td>Miłość w czasach zarazy</td>
+      <td>Gabriel García Márquez</td>
+      <td>2017-11-15</td>
+      <td>496</td>
+      <td>7,4</td>
+      <td>11578</td>
+      <td>literatura piękna</td>
+      <td>Muza</td>
+      <td>Márquez</td>
+      <td>16 h 32 min - 24 h 48 min</td>
+      <td>Carlos Marrodán Casas</td>
+      <td>El amor en los tiempos del colera</td>
+      <td>1994-01-01</td>
+      <td>1997-08-01</td>
+      <td>9788328705999</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4807144/milosc-w-czasach-zarazy">https://lubimyczytac.pl/ksiazka/4807144/milosc-w-czasach-zarazy</a></td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4628000/4628118/571298-352x500.jpg" width="60" ></td>
+      <td>Sto lat samotności</td>
+      <td>Gabriel García Márquez</td>
+      <td>2017-04-19</td>
+      <td>456</td>
+      <td>7,8</td>
+      <td>17868</td>
+      <td>klasyka</td>
+      <td>Muza</td>
+      <td>Márquez</td>
+      <td>15 h 12 min - 22 h 48 min</td>
+      <td>Ameryka Południowa, kazirodztwo, klasyka literatury, literatura kolumbijska, los, miłość, namiętność, Nagroda Nobla, Nobel, noblista, przeznaczenie, realizm magiczny, relacje rodzinne, rodzina, śmierć</td>
+      <td>Cien años de soledad</td>
+      <td>1975-01-01</td>
+      <td>1971-01-01</td>
+      <td>9788328706217</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4628118/sto-lat-samotnosci">https://lubimyczytac.pl/ksiazka/4628118/sto-lat-samotnosci</a></td>
+    </tr>
+    <tr>
+      <th>31</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4893000/4893518/747118-352x500.jpg" width="60" ></td>
       <td>Babel. W dwadzieścia języków dookoła świata</td>
       <td>Gaston Dorren</td>
       <td>2019-08-14</td>
       <td>432</td>
       <td>6,9</td>
-      <td>416</td>
+      <td>418</td>
       <td>językoznawstwo, nauka o literaturze</td>
       <td>Karakter</td>
       <td>NaN</td>
@@ -97,11 +890,10 @@ body
       <td>NaN</td>
       <td>9788366147188</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4893518/babel-w-dwadziescia-jezykow-dookola-swiata</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4893518/babel-w-dwadziescia-jezykow-dookola-swiata">https://lubimyczytac.pl/ksiazka/4893518/babel-w-dwadziescia-jezykow-dookola-swiata</a></td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>3</td>
+      <th>32</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4973000/4973522/910118-352x500.jpg" width="60" ></td>
       <td>Gadka. W sześćdziesiąt języków dookoła Europy</td>
       <td>Gaston Dorren</td>
@@ -119,18 +911,290 @@ body
       <td>2015-01-01</td>
       <td>9788366147829</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4973522/gadka-w-szescdziesiat-jezykow-dookola-europy</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4973522/gadka-w-szescdziesiat-jezykow-dookola-europy">https://lubimyczytac.pl/ksiazka/4973522/gadka-w-szescdziesiat-jezykow-dookola-europy</a></td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>13</td>
+      <th>33</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4913000/4913667/800001-352x500.jpg" width="60" ></td>
+      <td>Najlepsze miasto świata. Warszawa w odbudowie 1944-1949</td>
+      <td>Grzegorz Piątek</td>
+      <td>2020-02-26</td>
+      <td>512</td>
+      <td>8,0</td>
+      <td>339</td>
+      <td>reportaż</td>
+      <td>W.A.B.</td>
+      <td>NaN</td>
+      <td>17 h 4 min - 25 h 36 min</td>
+      <td>Warszawa, odbudowa, komunizm</td>
+      <td>NaN</td>
+      <td>2020-02-26</td>
+      <td>NaN</td>
+      <td>9788328037250</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4913667/najlepsze-miasto-swiata-warszawa-w-odbudowie-1944-1949">https://lubimyczytac.pl/ksiazka/4913667/najlepsze-miasto-swiata-warszawa-w-odbudowie-1944-1949</a></td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4860000/4860810/694426-352x500.jpg" width="60" ></td>
+      <td>Factfulness. Dlaczego świat jest lepszy, niż myślimy, czyli jak stereotypy zastąpić realną wiedzą</td>
+      <td>Hans Rosling</td>
+      <td>2018-10-31</td>
+      <td>368</td>
+      <td>7,9</td>
+      <td>3009</td>
+      <td>reportaż</td>
+      <td>Media Rodzina</td>
+      <td>NaN</td>
+      <td>12 h 16 min - 18 h 24 min</td>
+      <td></td>
+      <td>Factfulness: Ten Reasons We're Wrong About the World - and Why Things Are Better Than You Think</td>
+      <td>2018-10-31</td>
+      <td>2018-04-03</td>
+      <td>9788380084995</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4860810/factfulness-dlaczego-swiat-jest-lepszy-niz-myslimy-czyli-jak-stereotypy-zastapic-realna-wiedza">https://lubimyczytac.pl/ksiazka/4860810/factfulness-dlaczego-swiat-jest-lepszy-niz-myslimy-czyli-jak-stereotypy-zastapic-realna-wiedza</a></td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4278000/4278977/547865-352x500.jpg" width="60" ></td>
+      <td>T2 Trainspotting</td>
+      <td>Irvine Welsh</td>
+      <td>2017-03-02</td>
+      <td>508</td>
+      <td>7,1</td>
+      <td>377</td>
+      <td>literatura piękna</td>
+      <td>Burda Publishing Polska</td>
+      <td>NaN</td>
+      <td>16 h 56 min - 25 h 24 min</td>
+      <td>powieść angielska XX w., narkotyki</td>
+      <td>Porno</td>
+      <td>2006-03-08</td>
+      <td>2002-01-01</td>
+      <td>9788380531857</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4278977/t2-trainspotting">https://lubimyczytac.pl/ksiazka/4278977/t2-trainspotting</a></td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4912000/4912720/785174-352x500.jpg" width="60" ></td>
+      <td>Trainspotting</td>
+      <td>Irvine Welsh</td>
+      <td>2020-01-10</td>
+      <td>368</td>
+      <td>7,3</td>
+      <td>1616</td>
+      <td>literatura piękna</td>
+      <td>Vis-á-Vis/Etiuda</td>
+      <td>NaN</td>
+      <td>12 h 16 min - 18 h 24 min</td>
+      <td>heroina, narkotyki, uzależnienie</td>
+      <td>Trainspotting</td>
+      <td>1997-01-01</td>
+      <td>1996-01-01</td>
+      <td>9788379982462</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4912720/trainspotting">https://lubimyczytac.pl/ksiazka/4912720/trainspotting</a></td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/3823000/3823573/527435-352x500.jpg" width="60" ></td>
+      <td>Trainspotting zero</td>
+      <td>Irvine Welsh</td>
+      <td>2016-11-02</td>
+      <td>528</td>
+      <td>7,5</td>
+      <td>153</td>
+      <td>literatura piękna</td>
+      <td>Replika</td>
+      <td>NaN</td>
+      <td>17 h 36 min - 26 h 24 min</td>
+      <td>Jacek Spólny, narkotyki, dragi, powieść angielska XX w.</td>
+      <td>Skagboys</td>
+      <td>2016-11-02</td>
+      <td>2012-01-01</td>
+      <td>9788376745541</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/3823573/trainspotting-zero">https://lubimyczytac.pl/ksiazka/3823573/trainspotting-zero</a></td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/294000/294813/455233-352x500.jpg" width="60" ></td>
+      <td>Sztukmistrz z Lublina</td>
+      <td>Isaac Bashevis Singer</td>
+      <td>2016-02-25</td>
+      <td>248</td>
+      <td>7,1</td>
+      <td>2301</td>
+      <td>literatura piękna</td>
+      <td>Wydawnictwo Literackie</td>
+      <td>NaN</td>
+      <td>8 h 16 min - 12 h 24 min</td>
+      <td>Krystyna Szerer, kultura żydowska, Lublin, sztukmistrz</td>
+      <td>Der Kunzenmacher fun Lublin</td>
+      <td>1983-01-01</td>
+      <td>NaN</td>
+      <td>9788308060896</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/294813/sztukmistrz-z-lublina">https://lubimyczytac.pl/ksiazka/294813/sztukmistrz-z-lublina</a></td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4904000/4904047/767180-352x500.jpg" width="60" ></td>
+      <td>Milion małych kawałków</td>
+      <td>James Frey</td>
+      <td>2019-11-13</td>
+      <td>520</td>
+      <td>8,0</td>
+      <td>4096</td>
+      <td>literatura piękna</td>
+      <td>Burda Książki</td>
+      <td>NaN</td>
+      <td>17 h 20 min - 26 h 0 min</td>
+      <td>uzależnienie, odwyk, narkotyki, biografia, alkoholizm</td>
+      <td>A Million Little Pieces</td>
+      <td>2006-05-29</td>
+      <td>NaN</td>
+      <td>9788380536623</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4904047/milion-malych-kawalkow">https://lubimyczytac.pl/ksiazka/4904047/milion-malych-kawalkow</a></td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4849000/4849913/665106-352x500.jpg" width="60" ></td>
+      <td>The World Atlas of Coffee - From Beans to Brewing - Coffees Explored, Explained and Enjoyed</td>
+      <td>James Hoffmann</td>
+      <td>2014-01-01</td>
+      <td>256</td>
+      <td>7,7</td>
+      <td>11</td>
+      <td>kulinaria, przepisy kulinarne</td>
+      <td>Mitchell Beazley</td>
+      <td>NaN</td>
+      <td>8 h 32 min - 12 h 48 min</td>
+      <td>kawa, album, barista, baristyka</td>
+      <td>The World Atlas of Coffee - From Beans to Brewing - Coffees Explored, Explained and Enjoyed</td>
+      <td>2018-01-01</td>
+      <td>2014-01-01</td>
+      <td>9781845337872</td>
+      <td>angielski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4849913/the-world-atlas-of-coffee---from-beans-to-brewing---coffees-explored-explained-and-enjoyed">https://lubimyczytac.pl/ksiazka/4849913/the-world-atlas-of-coffee---from-beans-to-brewing---coffees-explored-explained-and-enjoyed</a></td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/309000/309961/489956-352x500.jpg" width="60" ></td>
+      <td>Swiss Made. Nieznana historia szwajcarskiego sukcesu</td>
+      <td>James R. Breiding</td>
+      <td>2016-06-23</td>
+      <td>472</td>
+      <td>6,0</td>
+      <td>3</td>
+      <td>reportaż</td>
+      <td>Agora</td>
+      <td>NaN</td>
+      <td>15 h 44 min - 23 h 36 min</td>
+      <td>reportaż, Szwajcaria, ekonomia, gospodarka, rozwój, cud gospodarczy, dobrobyt</td>
+      <td>Swiss Made. The untold story behind Switzerland's success</td>
+      <td>2016-06-23</td>
+      <td>NaN</td>
+      <td>9788326823909</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/309961/swiss-made-nieznana-historia-szwajcarskiego-sukcesu">https://lubimyczytac.pl/ksiazka/309961/swiss-made-nieznana-historia-szwajcarskiego-sukcesu</a></td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4805000/4805016/593769-352x500.jpg" width="60" ></td>
+      <td>Rzeczozmęczenie</td>
+      <td>James Wallman</td>
+      <td>2017-09-13</td>
+      <td>368</td>
+      <td>6,4</td>
+      <td>316</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>12 h 16 min - 18 h 24 min</td>
+      <td>rozwój osobisty; minimalizm, konsumpcjonizm</td>
+      <td>NaN</td>
+      <td>2017-09-13</td>
+      <td>NaN</td>
+      <td>9788365315922</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4805016/rzeczozmeczenie">https://lubimyczytac.pl/ksiazka/4805016/rzeczozmeczenie</a></td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4935000/4935904/834969-352x500.jpg" width="60" ></td>
+      <td>Betonoza. Jak się niszczy polskie miasta</td>
+      <td>Jan Mencwel</td>
+      <td>2020-08-01</td>
+      <td>341</td>
+      <td>7,3</td>
+      <td>512</td>
+      <td>reportaż</td>
+      <td>Krytyka Polityczna</td>
+      <td>Nie-Fikcja</td>
+      <td>11 h 22 min - 17 h 3 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2020-08-01</td>
+      <td>NaN</td>
+      <td>9788366586253</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4935904/betonoza-jak-sie-niszczy-polskie-miasta">https://lubimyczytac.pl/ksiazka/4935904/betonoza-jak-sie-niszczy-polskie-miasta</a></td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4857000/4857338/679184-352x500.jpg" width="60" ></td>
+      <td>Chleb. Techniki wypieku, przepisy, wskazówki, Wydanie nowe, uzupełnione</td>
+      <td>Jeffrey Hamelman</td>
+      <td>2018-01-01</td>
+      <td>678</td>
+      <td>8,6</td>
+      <td>83</td>
+      <td>kulinaria, przepisy kulinarne</td>
+      <td>Grupa Wydawnicza Foksal</td>
+      <td>NaN</td>
+      <td>22 h 36 min - 33 h 54 min</td>
+      <td>chleb, piekarstwo</td>
+      <td>Bread: A Baker's Book of Techniques and Recipes, 2nd Edition</td>
+      <td>2017-05-10</td>
+      <td>NaN</td>
+      <td>9788328053809</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4857338/chleb-techniki-wypieku-przepisy-wskazowki-wydanie-nowe-uzupelnione">https://lubimyczytac.pl/ksiazka/4857338/chleb-techniki-wypieku-przepisy-wskazowki-wydanie-nowe-uzupelnione</a></td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4904000/4904847/784401-352x500.jpg" width="60" ></td>
+      <td>Przyszło nam tu żyć. Reportaże z Rosji</td>
+      <td>Jelena Kostiuczenko</td>
+      <td>2020-01-15</td>
+      <td>328</td>
+      <td>7,3</td>
+      <td>973</td>
+      <td>reportaż</td>
+      <td>Czarne</td>
+      <td>Reportaż</td>
+      <td>10 h 56 min - 16 h 24 min</td>
+      <td>Rosja, Rosjanie, patologia, blokowisko, byłe ZSRR, Moskwa, Petersburg, reportaż uczestniczący, literatura faktu, gopnik, gopnicy, Biesłan</td>
+      <td>NaN</td>
+      <td>2020-01-15</td>
+      <td>NaN</td>
+      <td>9788380499591</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4904847/przyszlo-nam-tu-zyc-reportaze-z-rosji">https://lubimyczytac.pl/ksiazka/4904847/przyszlo-nam-tu-zyc-reportaze-z-rosji</a></td>
+    </tr>
+    <tr>
+      <th>46</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/272000/272749/430190-352x500.jpg" width="60" ></td>
       <td>Co może pójść nie tak?</td>
       <td>Jeremy Clarkson</td>
       <td>2015-11-04</td>
       <td>700</td>
       <td>7,1</td>
-      <td>232</td>
+      <td>233</td>
       <td>satyra</td>
       <td>Insignis</td>
       <td>NaN</td>
@@ -141,11 +1205,10 @@ body
       <td>NaN</td>
       <td>9788365315076</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/272749/co-moze-pojsc-nie-tak</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/272749/co-moze-pojsc-nie-tak">https://lubimyczytac.pl/ksiazka/272749/co-moze-pojsc-nie-tak</a></td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>16</td>
+      <th>47</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/78000/78234/352x500.jpg" width="60" ></td>
       <td>Doprowadzony do szału</td>
       <td>Jeremy Clarkson</td>
@@ -163,11 +1226,10 @@ body
       <td>NaN</td>
       <td>978-83-61428-25-1</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/78234/doprowadzony-do-szalu</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/78234/doprowadzony-do-szalu">https://lubimyczytac.pl/ksiazka/78234/doprowadzony-do-szalu</a></td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>19</td>
+      <th>48</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/49000/49210/352x500.jpg" width="60" ></td>
       <td>I jeszcze jedno...</td>
       <td>Jeremy Clarkson</td>
@@ -185,11 +1247,10 @@ body
       <td>2007-10-01</td>
       <td>9788360355039</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/49210/i-jeszcze-jedno</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/49210/i-jeszcze-jedno">https://lubimyczytac.pl/ksiazka/49210/i-jeszcze-jedno</a></td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>10</td>
+      <th>49</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4948000/4948581/860640-352x500.jpg" width="60" ></td>
       <td>Naprawdę?</td>
       <td>Jeremy Clarkson</td>
@@ -207,11 +1268,10 @@ body
       <td>NaN</td>
       <td>9788366575486</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4948581/naprawde</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4948581/naprawde">https://lubimyczytac.pl/ksiazka/4948581/naprawde</a></td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>18</td>
+      <th>50</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/5000/5729/352x500.jpg" width="60" ></td>
       <td>Nie zatrzymasz mnie</td>
       <td>Jeremy Clarkson</td>
@@ -229,11 +1289,10 @@ body
       <td>NaN</td>
       <td>9788361428053</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/5729/nie-zatrzymasz-mnie</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/5729/nie-zatrzymasz-mnie">https://lubimyczytac.pl/ksiazka/5729/nie-zatrzymasz-mnie</a></td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>14</td>
+      <th>51</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/237000/237438/327917-352x500.jpg" width="60" ></td>
       <td>Przecież nie proszę o wiele...</td>
       <td>Jeremy Clarkson</td>
@@ -251,18 +1310,17 @@ body
       <td>NaN</td>
       <td>9788363944643</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/237438/przeciez-nie-prosze-o-wiele</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/237438/przeciez-nie-prosze-o-wiele">https://lubimyczytac.pl/ksiazka/237438/przeciez-nie-prosze-o-wiele</a></td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>15</td>
+      <th>52</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/115000/115172/352x500.jpg" width="60" ></td>
       <td>W czym problem?</td>
       <td>Jeremy Clarkson</td>
       <td>2011-11-09</td>
       <td>360</td>
       <td>7,0</td>
-      <td>488</td>
+      <td>489</td>
       <td>publicystyka literacka, eseje</td>
       <td>Insignis</td>
       <td>NaN</td>
@@ -273,11 +1331,10 @@ body
       <td>NaN</td>
       <td>9788361428497</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/115172/w-czym-problem</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/115172/w-czym-problem">https://lubimyczytac.pl/ksiazka/115172/w-czym-problem</a></td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>9</td>
+      <th>53</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/37000/37242/963719-352x500.jpg" width="60" ></td>
       <td>Świat według Clarksona</td>
       <td>Jeremy Clarkson</td>
@@ -295,11 +1352,10 @@ body
       <td>NaN</td>
       <td>9788360355008</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/37242/swiat-wedlug-clarksona</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/37242/swiat-wedlug-clarksona">https://lubimyczytac.pl/ksiazka/37242/swiat-wedlug-clarksona</a></td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>12</td>
+      <th>54</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/3988000/3988216/534255-352x500.jpg" width="60" ></td>
       <td>Świat według Clarksona 6. Tak jak mówiłem…</td>
       <td>Jeremy Clarkson</td>
@@ -317,11 +1373,10 @@ body
       <td>NaN</td>
       <td>9788365315786</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/3988216/swiat-wedlug-clarksona-6-tak-jak-mowilem</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/3988216/swiat-wedlug-clarksona-6-tak-jak-mowilem">https://lubimyczytac.pl/ksiazka/3988216/swiat-wedlug-clarksona-6-tak-jak-mowilem</a></td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>17</td>
+      <th>55</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/57000/57158/352x500.jpg" width="60" ></td>
       <td>Świat według Clarksona, część 3. Na litość boską!</td>
       <td>Jeremy Clarkson</td>
@@ -339,18 +1394,17 @@ body
       <td>NaN</td>
       <td>9788361428152</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/57158/swiat-wedlug-clarksona-czesc-3-na-litosc-boska</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/57158/swiat-wedlug-clarksona-czesc-3-na-litosc-boska">https://lubimyczytac.pl/ksiazka/57158/swiat-wedlug-clarksona-czesc-3-na-litosc-boska</a></td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>11</td>
+      <th>56</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4905000/4905516/770304-352x500.jpg" width="60" ></td>
       <td>Świat według Clarksona. Jeśli mógłbym dokończyć…</td>
       <td>Jeremy Clarkson</td>
       <td>2019-11-13</td>
       <td>464</td>
       <td>6,8</td>
-      <td>203</td>
+      <td>204</td>
       <td>satyra</td>
       <td>Insignis</td>
       <td>NaN</td>
@@ -361,18 +1415,17 @@ body
       <td>NaN</td>
       <td>9788366360495</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4905516/swiat-wedlug-clarksona-jesli-moglbym-dokonczyc</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4905516/swiat-wedlug-clarksona-jesli-moglbym-dokonczyc">https://lubimyczytac.pl/ksiazka/4905516/swiat-wedlug-clarksona-jesli-moglbym-dokonczyc</a></td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>2</td>
+      <th>57</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/297000/297376/471670-352x500.jpg" width="60" ></td>
       <td>Zaraza</td>
       <td>Jerzy Ambroziewicz</td>
       <td>2016-03-30</td>
       <td>280</td>
       <td>7,1</td>
-      <td>417</td>
+      <td>420</td>
       <td>reportaż</td>
       <td>Dowody na Istnienie</td>
       <td>Faktyczny Dom Kultury</td>
@@ -383,11 +1436,430 @@ body
       <td>NaN</td>
       <td>9788394311841</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/297376/zaraza</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/297376/zaraza">https://lubimyczytac.pl/ksiazka/297376/zaraza</a></td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>6</td>
+      <th>58</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4862000/4862754/690664-352x500.jpg" width="60" ></td>
+      <td>Malowany ptak</td>
+      <td>Jerzy Kosiński</td>
+      <td>2018-10-05</td>
+      <td>336</td>
+      <td>7,3</td>
+      <td>6057</td>
+      <td>literatura piękna</td>
+      <td>Albatros</td>
+      <td>Klasyki Albatrosa</td>
+      <td>11 h 12 min - 16 h 48 min</td>
+      <td>Tomasz Mirkowicz</td>
+      <td>The Painted Bird</td>
+      <td>1989-01-01</td>
+      <td>NaN</td>
+      <td>9788381254137</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4862754/malowany-ptak">https://lubimyczytac.pl/ksiazka/4862754/malowany-ptak</a></td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/73000/73748/352x500.jpg" width="60" ></td>
+      <td>Alfabet Urbana</td>
+      <td>Jerzy Urban</td>
+      <td>1990-01-01</td>
+      <td>208</td>
+      <td>5,8</td>
+      <td>183</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Polska Oficyna Wydawnicza BGW</td>
+      <td>NaN</td>
+      <td>6 h 56 min - 10 h 24 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>1990-01-01</td>
+      <td>NaN</td>
+      <td>83-85167-03-X</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/73748/alfabet-urbana">https://lubimyczytac.pl/ksiazka/73748/alfabet-urbana</a></td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/242000/242766/887519-352x500.jpg" width="60" ></td>
+      <td>Druga klątwa Urbana</td>
+      <td>Jerzy Urban</td>
+      <td>2000-01-01</td>
+      <td>NaN</td>
+      <td>6,6</td>
+      <td>7</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Książka i Wiedza</td>
+      <td>NaN</td>
+      <td></td>
+      <td>felietony</td>
+      <td>NaN</td>
+      <td>2000-01-01</td>
+      <td>NaN</td>
+      <td>8305131548</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/242766/druga-klatwa-urbana">https://lubimyczytac.pl/ksiazka/242766/druga-klatwa-urbana</a></td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/243000/243241/344439-352x500.jpg" width="60" ></td>
+      <td>Klątwa Urbana</td>
+      <td>Jerzy Urban</td>
+      <td>1995-01-01</td>
+      <td>NaN</td>
+      <td>5,0</td>
+      <td>3</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Książka i Wiedza</td>
+      <td>NaN</td>
+      <td></td>
+      <td>eseje felietony</td>
+      <td>NaN</td>
+      <td>1995-01-01</td>
+      <td>NaN</td>
+      <td>8305127931</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/243241/klatwa-urbana">https://lubimyczytac.pl/ksiazka/243241/klatwa-urbana</a></td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4784000/4784524/582121-352x500.jpg" width="60" ></td>
+      <td>Opowieści Jerzego Urbana Kibica</td>
+      <td>Jerzy Urban</td>
+      <td>1990-01-01</td>
+      <td>160</td>
+      <td>5,0</td>
+      <td>2</td>
+      <td>literatura obyczajowa, romans</td>
+      <td>Firma</td>
+      <td>NaN</td>
+      <td>5 h 20 min - 8 h 0 min</td>
+      <td>jerzy urban, urban</td>
+      <td>NaN</td>
+      <td>1990-01-01</td>
+      <td>NaN</td>
+      <td>8300033351</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4784524/opowiesci-jerzego-urbana-kibica">https://lubimyczytac.pl/ksiazka/4784524/opowiesci-jerzego-urbana-kibica</a></td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/225000/225527/288757-352x500.jpg" width="60" ></td>
+      <td>Prima aprilis, towarzysze!</td>
+      <td>Jerzy Urban</td>
+      <td>1991-01-01</td>
+      <td>137</td>
+      <td>6,8</td>
+      <td>10</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Polska Oficyna Wydawnicza BGW</td>
+      <td>NaN</td>
+      <td>4 h 34 min - 6 h 51 min</td>
+      <td>urban, prl, publicystyka</td>
+      <td>NaN</td>
+      <td>1991-01-01</td>
+      <td>NaN</td>
+      <td>8385167749</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/225527/prima-aprilis-towarzysze">https://lubimyczytac.pl/ksiazka/225527/prima-aprilis-towarzysze</a></td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/73000/73930/352x500.jpg" width="60" ></td>
+      <td>Rozkosze podglądacza</td>
+      <td>Jerzy Urban</td>
+      <td>1988-01-01</td>
+      <td>292</td>
+      <td>3,5</td>
+      <td>4</td>
+      <td>reportaż</td>
+      <td>Czytelnik</td>
+      <td>NaN</td>
+      <td>9 h 44 min - 14 h 36 min</td>
+      <td>felieton, Polska, polityka</td>
+      <td>NaN</td>
+      <td>1988-01-01</td>
+      <td>NaN</td>
+      <td>83-07-01920-6</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/73930/rozkosze-podgladacza">https://lubimyczytac.pl/ksiazka/73930/rozkosze-podgladacza</a></td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/162000/162254/784635-352x500.jpg" width="60" ></td>
+      <td>Historia Szwajcarii</td>
+      <td>Jerzy Wojtowicz</td>
+      <td>1989-01-01</td>
+      <td>308</td>
+      <td>6,0</td>
+      <td>16</td>
+      <td>historia</td>
+      <td>Ossolineum</td>
+      <td>Historie Krajów i Narodów</td>
+      <td>10 h 16 min - 15 h 24 min</td>
+      <td>Historia, Szwajcaria, Historia Szwajcarii, Szwajcarzy, Historie państw świata, Kraje alpejskie</td>
+      <td>NaN</td>
+      <td>1989-01-01</td>
+      <td>NaN</td>
+      <td>8304029413</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/162254/historia-szwajcarii">https://lubimyczytac.pl/ksiazka/162254/historia-szwajcarii</a></td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4843000/4843891/653615-352x500.jpg" width="60" ></td>
+      <td>Chaos Warszawa. Porządki przestrzenne polskiego kapitalizmu</td>
+      <td>Joanna Kusiak</td>
+      <td>2017-01-01</td>
+      <td>NaN</td>
+      <td>7,9</td>
+      <td>10</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Fundacja Nowej Kultury Bęc Zmiana</td>
+      <td>NaN</td>
+      <td></td>
+      <td></td>
+      <td>NaN</td>
+      <td>2017-01-01</td>
+      <td>NaN</td>
+      <td>9788362418923</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4843891/chaos-warszawa-porzadki-przestrzenne-polskiego-kapitalizmu">https://lubimyczytac.pl/ksiazka/4843891/chaos-warszawa-porzadki-przestrzenne-polskiego-kapitalizmu</a></td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4930000/4930333/822590-352x500.jpg" width="60" ></td>
+      <td>Gwiazda Północy, Gwiazda Południa</td>
+      <td>Joanna Lampka</td>
+      <td>2020-06-12</td>
+      <td>276</td>
+      <td>7,9</td>
+      <td>93</td>
+      <td>fantasy, science fiction</td>
+      <td>Wydawnictwo AlterNatywne</td>
+      <td>NaN</td>
+      <td>9 h 12 min - 13 h 48 min</td>
+      <td>Królestwo, Cesarstwo, dziewczyny, oddział, misja, wywiad, więzienie, żołnierze, księżniczka, cesarz, atak, miłość, surfing, ocean, naszyjnik, więzień, mnich, akcja, uwolnienie, szpieg</td>
+      <td>NaN</td>
+      <td>2020-06-12</td>
+      <td>NaN</td>
+      <td>9788395366932</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4930333/gwiazda-polnocy-gwiazda-poludnia">https://lubimyczytac.pl/ksiazka/4930333/gwiazda-polnocy-gwiazda-poludnia</a></td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4943000/4943371/850221-352x500.jpg" width="60" ></td>
+      <td>Ja i moje przyjaciółki idiotki</td>
+      <td>Joanna Okuniewska</td>
+      <td>2020-10-05</td>
+      <td>525</td>
+      <td>7,5</td>
+      <td>797</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>TuOkuniewska</td>
+      <td>NaN</td>
+      <td>17 h 30 min - 26 h 15 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2020-10-05</td>
+      <td>NaN</td>
+      <td>9788395894602</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4943371/ja-i-moje-przyjaciolki-idiotki">https://lubimyczytac.pl/ksiazka/4943371/ja-i-moje-przyjaciolki-idiotki</a></td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4871000/4871916/706738-352x500.jpg" width="60" ></td>
+      <td>Dobrze nastrojone miasto</td>
+      <td>Jonathan F.P. Rose</td>
+      <td>2019-02-12</td>
+      <td>NaN</td>
+      <td>8,0</td>
+      <td>40</td>
+      <td>popularnonaukowa</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td></td>
+      <td>architektura, urbanistyka, miasto, aktywizm miejski</td>
+      <td>The Well Tempered City: What Modern Science, Ancient Civilizations, and Human Nature Teach Us About the Future of Urban Life</td>
+      <td>2019-02-12</td>
+      <td>NaN</td>
+      <td>9788366147003</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4871916/dobrze-nastrojone-miasto">https://lubimyczytac.pl/ksiazka/4871916/dobrze-nastrojone-miasto</a></td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4933000/4933084/828657-352x500.jpg" width="60" ></td>
+      <td>Zdrowe zęby</td>
+      <td>Kamila Wasiluk</td>
+      <td>2020-09-07</td>
+      <td>NaN</td>
+      <td>7,4</td>
+      <td>11</td>
+      <td>popularnonaukowa</td>
+      <td>Znak Literanova</td>
+      <td>NaN</td>
+      <td></td>
+      <td></td>
+      <td>NaN</td>
+      <td>2020-09-07</td>
+      <td>NaN</td>
+      <td>9788324071852</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4933084/zdrowe-zeby">https://lubimyczytac.pl/ksiazka/4933084/zdrowe-zeby</a></td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/62000/62361/352x500.jpg" width="60" ></td>
+      <td>Adolf Hitler. Biografia Führera</td>
+      <td>Karol Grünberg</td>
+      <td>1989-10-01</td>
+      <td>496</td>
+      <td>6,4</td>
+      <td>129</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Książka i Wiedza</td>
+      <td>NaN</td>
+      <td>16 h 32 min - 24 h 48 min</td>
+      <td>biografia, Adolf Hitler, III rzesza</td>
+      <td>NaN</td>
+      <td>1989-10-01</td>
+      <td>NaN</td>
+      <td>83-05-12076-7</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/62361/adolf-hitler-biografia-fuhrera">https://lubimyczytac.pl/ksiazka/62361/adolf-hitler-biografia-fuhrera</a></td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4847000/4847778/668004-352x500.jpg" width="60" ></td>
+      <td>A ja żem jej powiedziała...</td>
+      <td>Katarzyna Nosowska</td>
+      <td>2018-05-23</td>
+      <td>208</td>
+      <td>6,7</td>
+      <td>11368</td>
+      <td>literatura piękna</td>
+      <td>Wielka Litera</td>
+      <td>NaN</td>
+      <td>6 h 56 min - 10 h 24 min</td>
+      <td>literatura polska, życie, kobieta, polska rzeczywistość, doświadczenie, życiowa mądrość, show-biznes, celebryci, snobizm, fobie, moda</td>
+      <td>NaN</td>
+      <td>2018-05-23</td>
+      <td>NaN</td>
+      <td>9788380322592</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4847778/a-ja-zem-jej-powiedziala">https://lubimyczytac.pl/ksiazka/4847778/a-ja-zem-jej-powiedziala</a></td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/35000/35409/352x500.jpg" width="60" ></td>
+      <td>Jarmark odmieńców</td>
+      <td>Katherine Dunn</td>
+      <td>2007-12-11</td>
+      <td>373</td>
+      <td>6,9</td>
+      <td>205</td>
+      <td>literatura piękna</td>
+      <td>G+J</td>
+      <td>Demony</td>
+      <td>12 h 26 min - 18 h 39 min</td>
+      <td>cyrk, odmieńcy</td>
+      <td>Geek Love</td>
+      <td>2007-12-11</td>
+      <td>NaN</td>
+      <td>9788360376232</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/35409/jarmark-odmiencow">https://lubimyczytac.pl/ksiazka/35409/jarmark-odmiencow</a></td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4769000/4769955/581400-352x500.jpg" width="60" ></td>
+      <td>Ta nasza młodość... Jak dorastało się w PRL?</td>
+      <td>Kazimierz Kunicki</td>
+      <td>2017-07-20</td>
+      <td>300</td>
+      <td>5,9</td>
+      <td>73</td>
+      <td>reportaż</td>
+      <td>Bellona</td>
+      <td>NaN</td>
+      <td>10 h 0 min - 15 h 0 min</td>
+      <td>młodzież, PRL, młodość</td>
+      <td>NaN</td>
+      <td>2017-07-20</td>
+      <td>NaN</td>
+      <td>9788311144415</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4769955/ta-nasza-mlodosc-jak-dorastalo-sie-w-prl">https://lubimyczytac.pl/ksiazka/4769955/ta-nasza-mlodosc-jak-dorastalo-sie-w-prl</a></td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4098000/4098636/552122-352x500.jpg" width="60" ></td>
+      <td>Książka. Najpotężniejszy przedmiot naszych czasów zbadany od deski do deski</td>
+      <td>Keith Houston</td>
+      <td>2017-02-27</td>
+      <td>464</td>
+      <td>7,3</td>
+      <td>129</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Karakter</td>
+      <td>NaN</td>
+      <td>15 h 28 min - 23 h 12 min</td>
+      <td>Eseje, Dizajn, dzieje książki, papier, pismo, druk, ilustracje</td>
+      <td>The Book: A Cover-to-Cover Exploration of the Most Powerful Object of Our Time</td>
+      <td>2017-02-27</td>
+      <td>NaN</td>
+      <td>9788365271365</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4098636/ksiazka-najpotezniejszy-przedmiot-naszych-czasow-zbadany-od-deski-do-deski">https://lubimyczytac.pl/ksiazka/4098636/ksiazka-najpotezniejszy-przedmiot-naszych-czasow-zbadany-od-deski-do-deski</a></td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/246000/246841/356348-352x500.jpg" width="60" ></td>
+      <td>Kurt Vonnegut: Listy</td>
+      <td>Kurt Vonnegut</td>
+      <td>2015-02-20</td>
+      <td>528</td>
+      <td>7,3</td>
+      <td>71</td>
+      <td>reportaż</td>
+      <td>Albatros</td>
+      <td>NaN</td>
+      <td>17 h 36 min - 26 h 24 min</td>
+      <td>Listy</td>
+      <td>LETTERS</td>
+      <td>2015-02-20</td>
+      <td>NaN</td>
+      <td>9788378855729</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/246841/kurt-vonnegut-listy">https://lubimyczytac.pl/ksiazka/246841/kurt-vonnegut-listy</a></td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4906000/4906797/773176-352x500.jpg" width="60" ></td>
+      <td>Wenus w futrze</td>
+      <td>Leopold Sacher-Masoch</td>
+      <td>1989-01-01</td>
+      <td>151</td>
+      <td>5,6</td>
+      <td>73</td>
+      <td>klasyka</td>
+      <td>Res Polona</td>
+      <td>NaN</td>
+      <td>5 h 2 min - 7 h 33 min</td>
+      <td>literatura erotyczna, masochizm, romans</td>
+      <td>Venus in furs</td>
+      <td>1989-01-01</td>
+      <td>NaN</td>
+      <td>000-00-0000-00-0</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4906797/wenus-w-futrze">https://lubimyczytac.pl/ksiazka/4906797/wenus-w-futrze</a></td>
+    </tr>
+    <tr>
+      <th>78</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4878000/4878403/718826-352x500.jpg" width="60" ></td>
       <td>Kod kapitalizmu. Jak Gwiezdne wojny, Coca-Cola i Leo Messi kierują Twoim życiem</td>
       <td>Marcin Napiórkowski</td>
@@ -405,11 +1877,10 @@ body
       <td>NaN</td>
       <td>9788366232068</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4878403/kod-kapitalizmu-jak-gwiezdne-wojny-coca-cola-i-leo-messi-kieruja-twoim-zyciem</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4878403/kod-kapitalizmu-jak-gwiezdne-wojny-coca-cola-i-leo-messi-kieruja-twoim-zyciem">https://lubimyczytac.pl/ksiazka/4878403/kod-kapitalizmu-jak-gwiezdne-wojny-coca-cola-i-leo-messi-kieruja-twoim-zyciem</a></td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>7</td>
+      <th>79</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/314000/314041/512702-352x500.jpg" width="60" ></td>
       <td>Powstanie umarłych. Historia pamięci 1944-2014</td>
       <td>Marcin Napiórkowski</td>
@@ -427,11 +1898,10 @@ body
       <td>NaN</td>
       <td>9788365369246</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/314041/powstanie-umarlych-historia-pamieci-1944-2014</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/314041/powstanie-umarlych-historia-pamieci-1944-2014">https://lubimyczytac.pl/ksiazka/314041/powstanie-umarlych-historia-pamieci-1944-2014</a></td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>4</td>
+      <th>80</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4890000/4890328/746943-352x500.jpg" width="60" ></td>
       <td>Turbopatriotyzm</td>
       <td>Marcin Napiórkowski</td>
@@ -449,18 +1919,311 @@ body
       <td>NaN</td>
       <td>9788380499010</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4890328/turbopatriotyzm</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4890328/turbopatriotyzm">https://lubimyczytac.pl/ksiazka/4890328/turbopatriotyzm</a></td>
     </tr>
     <tr>
-      <th>18</th>
-      <td>20</td>
+      <th>81</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4805000/4805363/594400-352x500.jpg" width="60" ></td>
+      <td>Koszmarne istoty, które spotykasz każdego dnia</td>
+      <td>Marco Kubiś</td>
+      <td>2017-01-01</td>
+      <td>304</td>
+      <td>7,1</td>
+      <td>267</td>
+      <td>literatura piękna</td>
+      <td>Flow books</td>
+      <td>NaN</td>
+      <td>10 h 8 min - 15 h 12 min</td>
+      <td>literatura polska</td>
+      <td>NaN</td>
+      <td>2017-01-01</td>
+      <td>NaN</td>
+      <td>9788324038275</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4805363/koszmarne-istoty-ktore-spotykasz-kazdego-dnia">https://lubimyczytac.pl/ksiazka/4805363/koszmarne-istoty-ktore-spotykasz-kazdego-dnia</a></td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4902000/4902696/764839-352x500.jpg" width="60" ></td>
+      <td>Osobliwe miejsca, które odwiedzasz każdego dnia</td>
+      <td>Marco Kubiś</td>
+      <td>2019-09-30</td>
+      <td>272</td>
+      <td>6,5</td>
+      <td>69</td>
+      <td>reportaż</td>
+      <td>Znak Literanova</td>
+      <td>NaN</td>
+      <td>9 h 4 min - 13 h 36 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2019-09-30</td>
+      <td>NaN</td>
+      <td>9788324055951</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4902696/osobliwe-miejsca-ktore-odwiedzasz-kazdego-dnia">https://lubimyczytac.pl/ksiazka/4902696/osobliwe-miejsca-ktore-odwiedzasz-kazdego-dnia</a></td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4925000/4925851/812564-352x500.jpg" width="60" ></td>
+      <td>Homo Politicus Sapiens. Biologiczne aspekty politycznej gry</td>
+      <td>Marek Migalski</td>
+      <td>2020-04-22</td>
+      <td>224</td>
+      <td>7,6</td>
+      <td>14</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Post Factum</td>
+      <td>NaN</td>
+      <td>7 h 28 min - 11 h 12 min</td>
+      <td>esej, socjologia, politologia, polityka, społeczeństwo</td>
+      <td>NaN</td>
+      <td>2020-04-22</td>
+      <td>NaN</td>
+      <td>9788366460720</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4925851/homo-politicus-sapiens-biologiczne-aspekty-politycznej-gry">https://lubimyczytac.pl/ksiazka/4925851/homo-politicus-sapiens-biologiczne-aspekty-politycznej-gry</a></td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/297000/297294/461471-352x500.jpg" width="60" ></td>
+      <td>Człowiek to człowiek, a śmierć to śmierć</td>
+      <td>Maria Stepan</td>
+      <td>2016-02-24</td>
+      <td>240</td>
+      <td>6,7</td>
+      <td>30</td>
+      <td>reportaż</td>
+      <td>Zwierciadło</td>
+      <td>NaN</td>
+      <td>8 h 0 min - 12 h 0 min</td>
+      <td>ukraina, kijów, majdan</td>
+      <td>NaN</td>
+      <td>2016-02-24</td>
+      <td>NaN</td>
+      <td>9788364776854</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/297294/czlowiek-to-czlowiek-a-smierc-to-smierc">https://lubimyczytac.pl/ksiazka/297294/czlowiek-to-czlowiek-a-smierc-to-smierc</a></td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4997000/4997332/951025-352x500.jpg" width="60" ></td>
+      <td>Do you read me? Bookstores around the world.</td>
+      <td>Marianne Julia Strauss</td>
+      <td>2020-01-01</td>
+      <td>NaN</td>
+      <td>8,0</td>
+      <td>1</td>
+      <td>sztuka</td>
+      <td>GESTALTEN</td>
+      <td>NaN</td>
+      <td></td>
+      <td></td>
+      <td>Do you read me? Bookstores around the world.</td>
+      <td>2020-01-01</td>
+      <td>NaN</td>
+      <td>9783899559941</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4997332/do-you-read-me-bookstores-around-the-world">https://lubimyczytac.pl/ksiazka/4997332/do-you-read-me-bookstores-around-the-world</a></td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/3970000/3970926/608136-352x500.jpg" width="60" ></td>
+      <td>Niedziela, która zdarzyła się w środę</td>
+      <td>Mariusz Szczygieł</td>
+      <td>2017-01-25</td>
+      <td>176</td>
+      <td>7,3</td>
+      <td>1874</td>
+      <td>reportaż</td>
+      <td>Czarne</td>
+      <td>Reportaż</td>
+      <td>5 h 52 min - 8 h 48 min</td>
+      <td>demokracja, III RP, kapitalizm, lata 90. XX w., Polacy, przemiany społeczne, przemiany ustrojowe, reportaż, transformacja ustrojowa</td>
+      <td>NaN</td>
+      <td>1996-01-01</td>
+      <td>NaN</td>
+      <td>9788380494312</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/3970926/niedziela-ktora-zdarzyla-sie-w-srode">https://lubimyczytac.pl/ksiazka/3970926/niedziela-ktora-zdarzyla-sie-w-srode</a></td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4914000/4914929/789733-352x500.jpg" width="60" ></td>
+      <td>Osobisty przewodnik po Pradze</td>
+      <td>Mariusz Szczygieł</td>
+      <td>2020-05-26</td>
+      <td>372</td>
+      <td>7,6</td>
+      <td>847</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Dowody na Istnienie</td>
+      <td>Nie w serii</td>
+      <td>12 h 24 min - 18 h 36 min</td>
+      <td>literatura polska, praga, czechy, przewodnik, podróże, reportaż</td>
+      <td>NaN</td>
+      <td>2020-05-26</td>
+      <td>NaN</td>
+      <td>9788365970435</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4914929/osobisty-przewodnik-po-pradze">https://lubimyczytac.pl/ksiazka/4914929/osobisty-przewodnik-po-pradze</a></td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4805000/4805634/595013-352x500.jpg" width="60" ></td>
+      <td>Dom polski. Meblościanka z pikasami</td>
+      <td>Małgorzata Czyńska</td>
+      <td>2017-11-10</td>
+      <td>208</td>
+      <td>6,8</td>
+      <td>178</td>
+      <td>literatura piękna</td>
+      <td>Czarne</td>
+      <td>Poza serią</td>
+      <td>6 h 56 min - 10 h 24 min</td>
+      <td>literatura polska, Joanna Grochocka</td>
+      <td>NaN</td>
+      <td>2017-11-10</td>
+      <td>NaN</td>
+      <td>9788380495982</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4805634/dom-polski-mebloscianka-z-pikasami">https://lubimyczytac.pl/ksiazka/4805634/dom-polski-mebloscianka-z-pikasami</a></td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/5001000/5001198/958056-352x500.jpg" width="60" ></td>
+      <td>Mistrz i Małgorzata</td>
+      <td>Michaił Bułhakow</td>
+      <td>2022-03-23</td>
+      <td>544</td>
+      <td>8,4</td>
+      <td>49817</td>
+      <td>klasyka</td>
+      <td>Świat Książki</td>
+      <td>NaN</td>
+      <td>18 h 8 min - 27 h 12 min</td>
+      <td></td>
+      <td>Мастер и Маргарита</td>
+      <td>1969-01-01</td>
+      <td>2006-02-28</td>
+      <td>9788381395731</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/5001198/mistrz-i-malgorzata">https://lubimyczytac.pl/ksiazka/5001198/mistrz-i-malgorzata</a></td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/154000/154347/352x500.jpg" width="60" ></td>
+      <td>Lwów 1918-1919</td>
+      <td>Michał Klimecki</td>
+      <td></td>
+      <td>205</td>
+      <td>7,0</td>
+      <td>29</td>
+      <td>historia</td>
+      <td>Bellona</td>
+      <td>Historyczne Bitwy</td>
+      <td>6 h 50 min - 10 h 15 min</td>
+      <td>historyczne, bitwy, lwów</td>
+      <td>NaN</td>
+      <td>2011-01-01</td>
+      <td>NaN</td>
+      <td>000-00-0000-00-0</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/154347/lwow-1918-1919">https://lubimyczytac.pl/ksiazka/154347/lwow-1918-1919</a></td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/267000/267343/416599-352x500.jpg" width="60" ></td>
+      <td>Kompleks Pałacu. Życie społeczne stalinowskiego wieżowca w kapitalistycznej Warszawie</td>
+      <td>Michał Murawski</td>
+      <td>2015-07-28</td>
+      <td>382</td>
+      <td>7,0</td>
+      <td>8</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Muzeum Warszawy</td>
+      <td>NaN</td>
+      <td>12 h 44 min - 19 h 6 min</td>
+      <td>warszawa, pałac kultury i nauki, pkin, historia Warszawy, historia społeczna, Pałac Kultury, PRL, socrealizm, architektura</td>
+      <td>The Palace Complex: The Social Life of a Stalinist Skyscraper in Post-Socialist Warsaw</td>
+      <td>2015-07-28</td>
+      <td>NaN</td>
+      <td>9788362189489</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/267343/kompleks-palacu-zycie-spoleczne-stalinowskiego-wiezowca-w-kapitalistycznej-warszawie">https://lubimyczytac.pl/ksiazka/267343/kompleks-palacu-zycie-spoleczne-stalinowskiego-wiezowca-w-kapitalistycznej-warszawie</a></td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/96000/96979/352x500.jpg" width="60" ></td>
+      <td>Wojny reprodukcyjne. Płeć, władza a przyszłość świata</td>
+      <td>Michelle Goldberg</td>
+      <td>2011-01-01</td>
+      <td>424</td>
+      <td>6,8</td>
+      <td>29</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Czarna Owca</td>
+      <td>NaN</td>
+      <td>14 h 8 min - 21 h 12 min</td>
+      <td>kobiety, prawo kobiet, prawo do aborcji, feminizm, edukacja seksualna, antykoncepcja</td>
+      <td>The Means of Reproduction. Sex, Power and the Future of the World</td>
+      <td>2011-01-01</td>
+      <td>NaN</td>
+      <td>9788375542028</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/96979/wojny-reprodukcyjne-plec-wladza-a-przyszlosc-swiata">https://lubimyczytac.pl/ksiazka/96979/wojny-reprodukcyjne-plec-wladza-a-przyszlosc-swiata</a></td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4906000/4906483/1005290-352x500.jpg" width="60" ></td>
+      <td>Ostatni brzeg</td>
+      <td>Nevil Shute</td>
+      <td>2021-03-09</td>
+      <td>344</td>
+      <td>7,6</td>
+      <td>1016</td>
+      <td>fantasy, science fiction</td>
+      <td>Rebis</td>
+      <td>Wehikuł czasu [Rebis]</td>
+      <td>11 h 28 min - 17 h 12 min</td>
+      <td></td>
+      <td>On the Beach</td>
+      <td>1968-01-01</td>
+      <td>NaN</td>
+      <td>9788381882118</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4906483/ostatni-brzeg">https://lubimyczytac.pl/ksiazka/4906483/ostatni-brzeg</a></td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4888000/4888370/740312-352x500.jpg" width="60" ></td>
+      <td>Nie zdążę</td>
+      <td>Olga Gitkiewicz</td>
+      <td>2019-10-25</td>
+      <td>237</td>
+      <td>6,9</td>
+      <td>1356</td>
+      <td>reportaż</td>
+      <td>Dowody na Istnienie</td>
+      <td>Seria Reporterska</td>
+      <td>7 h 54 min - 11 h 51 min</td>
+      <td>transport, transport publiczny, komunikacja miejska, wykluczenie komunikacyjne</td>
+      <td>NaN</td>
+      <td>2019-10-25</td>
+      <td>NaN</td>
+      <td>9788365970398</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4888370/nie-zdaze">https://lubimyczytac.pl/ksiazka/4888370/nie-zdaze</a></td>
+    </tr>
+    <tr>
+      <th>95</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/163000/163634/497144-352x500.jpg" width="60" ></td>
       <td>Księgi Jakubowe</td>
       <td>Olga Tokarczuk</td>
       <td>2014-10-23</td>
       <td>912</td>
       <td>7,8</td>
-      <td>3761</td>
+      <td>3773</td>
       <td>powieść historyczna</td>
       <td>Wydawnictwo Literackie</td>
       <td>NaN</td>
@@ -471,11 +2234,136 @@ body
       <td>NaN</td>
       <td>9788308049396</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/163634/ksiegi-jakubowe</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/163634/ksiegi-jakubowe">https://lubimyczytac.pl/ksiazka/163634/ksiegi-jakubowe</a></td>
     </tr>
     <tr>
-      <th>19</th>
-      <td>1</td>
+      <th>96</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/254000/254758/420113-352x500.jpg" width="60" ></td>
+      <td>Dziewczyna z pociągu</td>
+      <td>Paula Hawkins</td>
+      <td>2015-10-21</td>
+      <td>328</td>
+      <td>6,6</td>
+      <td>35242</td>
+      <td>kryminał, sensacja, thriller</td>
+      <td>Świat Książki</td>
+      <td>NaN</td>
+      <td>10 h 56 min - 16 h 24 min</td>
+      <td>alkoholizm, tajemnice, pociąg, Jan Kraśko, suspens, literatura brytyjska, literatura angielska</td>
+      <td>The Girl on the Train</td>
+      <td>2015-10-21</td>
+      <td>NaN</td>
+      <td>9788380310650</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/254758/dziewczyna-z-pociagu">https://lubimyczytac.pl/ksiazka/254758/dziewczyna-z-pociagu</a></td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/93000/93145/352x500.jpg" width="60" ></td>
+      <td>Jajakobyły : spowiedź życia Jerzego Urbana</td>
+      <td>Piotr Gadzinowski</td>
+      <td>1992-01-01</td>
+      <td>NaN</td>
+      <td>6,5</td>
+      <td>76</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Polska Oficyna Wydawnicza BGW</td>
+      <td>NaN</td>
+      <td></td>
+      <td>Urban, Jajakobyły, Gadzinowski</td>
+      <td>NaN</td>
+      <td>1992-01-01</td>
+      <td>NaN</td>
+      <td>8370661815</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/93145/jajakobyly-spowiedz-zycia-jerzego-urbana">https://lubimyczytac.pl/ksiazka/93145/jajakobyly-spowiedz-zycia-jerzego-urbana</a></td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4860000/4860477/685970-352x500.jpg" width="60" ></td>
+      <td>Jak sfałszować wybory</td>
+      <td>Piotr Kościński</td>
+      <td>2018-10-01</td>
+      <td>NaN</td>
+      <td>7,1</td>
+      <td>10</td>
+      <td>historia</td>
+      <td>Trzecia Strona</td>
+      <td>NaN</td>
+      <td></td>
+      <td>reportaż, historia, wybory, fałszerstwa, Piotr Kościński, facebook, Polska, USA, Cambridge Analytica, Wielka Brytania, fałszowanie, manipulacje, Ukraina, Białoruś</td>
+      <td>NaN</td>
+      <td>2018-10-01</td>
+      <td>NaN</td>
+      <td>9788364526671</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4860477/jak-sfalszowac-wybory">https://lubimyczytac.pl/ksiazka/4860477/jak-sfalszowac-wybory</a></td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4995000/4995859/948465-352x500.jpg" width="60" ></td>
+      <td>Cztery wymiary architektury</td>
+      <td>Radosław Gajda</td>
+      <td>2021-12-06</td>
+      <td>320</td>
+      <td>8,2</td>
+      <td>41</td>
+      <td>sztuka</td>
+      <td>Natalia Szcześniak Dobre Pomysły</td>
+      <td>NaN</td>
+      <td>10 h 40 min - 16 h 0 min</td>
+      <td>architektura, aiagi, popularnonaukowa, historia architektury, esej</td>
+      <td>NaN</td>
+      <td>2021-12-06</td>
+      <td>NaN</td>
+      <td>9788396301406</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4995859/cztery-wymiary-architektury">https://lubimyczytac.pl/ksiazka/4995859/cztery-wymiary-architektury</a></td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4853000/4853646/683837-352x500.jpg" width="60" ></td>
+      <td>Polska może być lepsza. Kulisy polskiej dyplomacji</td>
+      <td>Radosław Sikorski</td>
+      <td>2018-10-15</td>
+      <td>400</td>
+      <td>7,4</td>
+      <td>155</td>
+      <td>reportaż</td>
+      <td>Znak Horyzont</td>
+      <td>NaN</td>
+      <td>13 h 20 min - 20 h 0 min</td>
+      <td>Sikorski, polityka, Europa, demokracja</td>
+      <td>NaN</td>
+      <td>2018-10-15</td>
+      <td>NaN</td>
+      <td>9788324034277</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4853646/polska-moze-byc-lepsza-kulisy-polskiej-dyplomacji">https://lubimyczytac.pl/ksiazka/4853646/polska-moze-byc-lepsza-kulisy-polskiej-dyplomacji</a></td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4724000/4724047/654611-352x500.jpg" width="60" ></td>
+      <td>451° Fahrenheita</td>
+      <td>Ray Bradbury</td>
+      <td>2018-04-18</td>
+      <td>176</td>
+      <td>7,4</td>
+      <td>6903</td>
+      <td>fantasy, science fiction</td>
+      <td>Mag</td>
+      <td>Artefakty</td>
+      <td>5 h 52 min - 8 h 48 min</td>
+      <td></td>
+      <td>Fahrenheit 451</td>
+      <td>1960-01-01</td>
+      <td>2008-01-01</td>
+      <td>9788374809221</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4724047/451-fahrenheita">https://lubimyczytac.pl/ksiazka/4724047/451-fahrenheita</a></td>
+    </tr>
+    <tr>
+      <th>102</th>
       <td><img src="https://s.lubimyczytac.pl/upload/books/4949000/4949256/861971-352x500.jpg" width="60" ></td>
       <td>Zachowuj się. Jak biologia wydobywa z nas to, co najgorsze, i to, co najlepsze</td>
       <td>Robert M. Sapolsky</td>
@@ -493,7 +2381,406 @@ body
       <td>2017-05-02</td>
       <td>9788380088276</td>
       <td>polski</td>
-      <td>https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze">https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze</a></td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4915000/4915988/792317-352x500.jpg" width="60" ></td>
+      <td>Zero zero zero. Jak kokaina rządzi światem</td>
+      <td>Roberto Saviano</td>
+      <td>2020-02-26</td>
+      <td>400</td>
+      <td>6,4</td>
+      <td>400</td>
+      <td>reportaż</td>
+      <td>Sonia Draga</td>
+      <td>NaN</td>
+      <td>13 h 20 min - 20 h 0 min</td>
+      <td>literatura włoska, kokaina, ekranizacja</td>
+      <td>Zero, zero, zero</td>
+      <td>2014-10-22</td>
+      <td>2013-04-05</td>
+      <td>9788366460799</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4915988/zero-zero-zero-jak-kokaina-rzadzi-swiatem">https://lubimyczytac.pl/ksiazka/4915988/zero-zero-zero-jak-kokaina-rzadzi-swiatem</a></td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4817000/4817475/617978-352x500.jpg" width="60" ></td>
+      <td>Perfekcyjna maszyna do czytania. O ergonomii książki</td>
+      <td>Roland Reuß</td>
+      <td>2017-12-12</td>
+      <td>95</td>
+      <td>7,6</td>
+      <td>12</td>
+      <td>sztuka</td>
+      <td>d2d.pl</td>
+      <td>Estetyka książki</td>
+      <td>3 h 10 min - 4 h 45 min</td>
+      <td>edytorstwo, estetyka</td>
+      <td>Die perfekte Lesemaschine. Zur Ergonomie des Buches</td>
+      <td>2017-12-12</td>
+      <td>NaN</td>
+      <td>9788394030698</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4817475/perfekcyjna-maszyna-do-czytania-o-ergonomii-ksiazki">https://lubimyczytac.pl/ksiazka/4817475/perfekcyjna-maszyna-do-czytania-o-ergonomii-ksiazki</a></td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4937000/4937303/867040-352x500.jpg" width="60" ></td>
+      <td>Instagram. Bez filtra.</td>
+      <td>Sarah Frier</td>
+      <td>2020-11-25</td>
+      <td>360</td>
+      <td>6,9</td>
+      <td>83</td>
+      <td>reportaż</td>
+      <td>Feeria</td>
+      <td>NaN</td>
+      <td>12 h 0 min - 18 h 0 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2020-11-25</td>
+      <td>NaN</td>
+      <td>9788382250008</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4937303/instagram-bez-filtra">https://lubimyczytac.pl/ksiazka/4937303/instagram-bez-filtra</a></td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4899000/4899851/759595-352x500.jpg" width="60" ></td>
+      <td>Wszyscy kłamią. Big data, nowe dane i wszystko, co Internet może nam powiedzieć o tym, kim naprawdę jesteśmy</td>
+      <td>Seth Stephens-Davidowitz</td>
+      <td>2019-10-30</td>
+      <td>402</td>
+      <td>6,6</td>
+      <td>557</td>
+      <td>popularnonaukowa</td>
+      <td>Wydawnictwo Literackie</td>
+      <td>NaN</td>
+      <td>13 h 24 min - 20 h 6 min</td>
+      <td>Internet, google, dane, analiza danych, statystyka, literatura popularnonaukowa, profilowanie, bezpieczeństwo w sieci, big data, kłamstwo</td>
+      <td>Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are</td>
+      <td>2019-10-30</td>
+      <td>2017-05-09</td>
+      <td>9788308069516</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4899851/wszyscy-klamia-big-data-nowe-dane-i-wszystko-co-internet-moze-nam-powiedziec-o-tym-kim-naprawde">https://lubimyczytac.pl/ksiazka/4899851/wszyscy-klamia-big-data-nowe-dane-i-wszystko-co-internet-moze-nam-powiedziec-o-tym-kim-naprawde</a></td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4888000/4888689/740771-352x500.jpg" width="60" ></td>
+      <td>Pamiętnik księgarza</td>
+      <td>Shaun Bythell</td>
+      <td>2019-06-19</td>
+      <td>388</td>
+      <td>6,1</td>
+      <td>1138</td>
+      <td>biografia, autobiografia, pamiętnik</td>
+      <td>Insignis</td>
+      <td>NaN</td>
+      <td>12 h 56 min - 19 h 24 min</td>
+      <td>antykwariat, humor, książka, literatura, pasja, księgarnia, księgarstwo, księgarz, księgarnie</td>
+      <td>The Diary of a Bookseller</td>
+      <td>2019-06-19</td>
+      <td>2017-09-28</td>
+      <td>9788366071919</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4888689/pamietnik-ksiegarza">https://lubimyczytac.pl/ksiazka/4888689/pamietnik-ksiegarza</a></td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4930000/4930530/823013-352x500.jpg" width="60" ></td>
+      <td>Chemia śmierci</td>
+      <td>Simon Beckett</td>
+      <td>2020-08-12</td>
+      <td>353</td>
+      <td>7,7</td>
+      <td>19120</td>
+      <td>kryminał, sensacja, thriller</td>
+      <td>Czarna Owca</td>
+      <td>NaN</td>
+      <td>11 h 46 min - 17 h 39 min</td>
+      <td>Dr David Hunter, Antropologia sądowa, Śledztwo, Morderstwo, Trupia farma</td>
+      <td>The Chemistry of Death</td>
+      <td>2006-01-01</td>
+      <td>2007-01-01</td>
+      <td>9788381435987</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4930530/chemia-smierci">https://lubimyczytac.pl/ksiazka/4930530/chemia-smierci</a></td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4238000/4238739/580973-352x500.jpg" width="60" ></td>
+      <td>Ku urbanologii</td>
+      <td>Stanisław Lose</td>
+      <td>2015-01-01</td>
+      <td>260</td>
+      <td>9,0</td>
+      <td>2</td>
+      <td>popularnonaukowa</td>
+      <td>Unpubleashed</td>
+      <td>NaN</td>
+      <td>8 h 40 min - 13 h 0 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2015-01-01</td>
+      <td>NaN</td>
+      <td>9788394045722</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4238739/ku-urbanologii">https://lubimyczytac.pl/ksiazka/4238739/ku-urbanologii</a></td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4886000/4886342/734036-352x500.jpg" width="60" ></td>
+      <td>Władcy jedzenia. Jak przemysł spożywczy niszczy planetę</td>
+      <td>Stefano Liberti</td>
+      <td>2019-05-15</td>
+      <td>320</td>
+      <td>6,9</td>
+      <td>207</td>
+      <td>reportaż</td>
+      <td>Agora</td>
+      <td>NaN</td>
+      <td>10 h 40 min - 16 h 0 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2019-05-15</td>
+      <td>NaN</td>
+      <td>9788326828362</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4886342/wladcy-jedzenia-jak-przemysl-spozywczy-niszczy-planete">https://lubimyczytac.pl/ksiazka/4886342/wladcy-jedzenia-jak-przemysl-spozywczy-niszczy-planete</a></td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4985000/4985768/931050-352x500.jpg" width="60" ></td>
+      <td>Mroczna połowa</td>
+      <td>Stephen King</td>
+      <td>2021-10-01</td>
+      <td>480</td>
+      <td>6,8</td>
+      <td>3553</td>
+      <td>horror</td>
+      <td>Albatros</td>
+      <td>NaN</td>
+      <td>16 h 0 min - 24 h 0 min</td>
+      <td></td>
+      <td>The Dark Half</td>
+      <td>1993-01-01</td>
+      <td>1989-01-01</td>
+      <td>9788382156799</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4985768/mroczna-polowa">https://lubimyczytac.pl/ksiazka/4985768/mroczna-polowa</a></td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/90000/90347/352x500.jpg" width="60" ></td>
+      <td>Cel - Szwajcaria</td>
+      <td>Stephen P. Halbrook</td>
+      <td>2003-01-01</td>
+      <td>250</td>
+      <td>7,3</td>
+      <td>7</td>
+      <td>historia</td>
+      <td>Bellona</td>
+      <td>NaN</td>
+      <td>8 h 20 min - 12 h 30 min</td>
+      <td>II wojna światowa, wywiad</td>
+      <td>Target Switzerland : Swiss armed neutrality in World War II</td>
+      <td>2003-01-01</td>
+      <td>NaN</td>
+      <td>8311096902</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/90347/cel---szwajcaria">https://lubimyczytac.pl/ksiazka/90347/cel---szwajcaria</a></td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4840000/4840610/649265-352x500.jpg" width="60" ></td>
+      <td>Szwajcaria i naziści. Jak alpejska republika przetrwała w cieniu III Rzeszy</td>
+      <td>Stephen P. Halbrook</td>
+      <td>2015-09-23</td>
+      <td>368</td>
+      <td>6,8</td>
+      <td>27</td>
+      <td>historia</td>
+      <td>Wydawnictwo Dolnośląskie</td>
+      <td>NaN</td>
+      <td>12 h 16 min - 18 h 24 min</td>
+      <td>Szwajcaria, III Rzesza, II wojna światowa, historia</td>
+      <td>The Swiss and the Nazis</td>
+      <td>2015-09-23</td>
+      <td>NaN</td>
+      <td>9788327154163</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4840610/szwajcaria-i-nazisci-jak-alpejska-republika-przetrwala-w-cieniu-iii-rzeszy">https://lubimyczytac.pl/ksiazka/4840610/szwajcaria-i-nazisci-jak-alpejska-republika-przetrwala-w-cieniu-iii-rzeszy</a></td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/28000/28544/352x500.jpg" width="60" ></td>
+      <td>Zona 22</td>
+      <td>Tig Hague</td>
+      <td>2009-05-25</td>
+      <td>336</td>
+      <td>7,3</td>
+      <td>128</td>
+      <td>reportaż</td>
+      <td>Świat Książki</td>
+      <td>NaN</td>
+      <td>11 h 12 min - 16 h 48 min</td>
+      <td></td>
+      <td>Zona 22</td>
+      <td>2009-05-25</td>
+      <td>NaN</td>
+      <td>9788324712106</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/28544/zona-22">https://lubimyczytac.pl/ksiazka/28544/zona-22</a></td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4876000/4876470/715195-352x500.jpg" width="60" ></td>
+      <td>W co wierzą Polacy? Śledztwo w sprawie wróżek, jasnowidzów, szeptuch...</td>
+      <td>Tomasz Kwaśniewski</td>
+      <td>2019-03-11</td>
+      <td>494</td>
+      <td>6,5</td>
+      <td>177</td>
+      <td>reportaż</td>
+      <td>Znak</td>
+      <td>NaN</td>
+      <td>16 h 28 min - 24 h 42 min</td>
+      <td></td>
+      <td>NaN</td>
+      <td>2019-03-11</td>
+      <td>NaN</td>
+      <td>9788324055449</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4876470/w-co-wierza-polacy-sledztwo-w-sprawie-wrozek-jasnowidzow-szeptuch">https://lubimyczytac.pl/ksiazka/4876470/w-co-wierza-polacy-sledztwo-w-sprawie-wrozek-jasnowidzow-szeptuch</a></td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/107000/107521/352x500.jpg" width="60" ></td>
+      <td>Socjologia rodziny. Ewolucja, historia, zróżnicowanie</td>
+      <td>Tomasz Szlendak</td>
+      <td>2010-01-01</td>
+      <td>541</td>
+      <td>7,0</td>
+      <td>23</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Wydawnictwo Naukowe PWN</td>
+      <td>NaN</td>
+      <td>18 h 2 min - 27 h 3 min</td>
+      <td>socjologia, socjologia rodziny, psychologia ewolucyjna, rodzina</td>
+      <td>NaN</td>
+      <td>2010-01-01</td>
+      <td>NaN</td>
+      <td>000-00-0000-00-0</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/107521/socjologia-rodziny-ewolucja-historia-zroznicowanie">https://lubimyczytac.pl/ksiazka/107521/socjologia-rodziny-ewolucja-historia-zroznicowanie</a></td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4929000/4929132/819868-352x500.jpg" width="60" ></td>
+      <td>Terapia z użyciem MDMA i innych entaktogenów</td>
+      <td>Torsten Passie</td>
+      <td>2020-05-27</td>
+      <td>230</td>
+      <td>7,1</td>
+      <td>35</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Wydawnictwo Cień Kształtu</td>
+      <td>NaN</td>
+      <td>7 h 40 min - 11 h 30 min</td>
+      <td>psychoterapia, terapia, psychologia, psychiatria, mdma, ecstasy, narkotyki, psychodeliki, entaktogeny, trauma, zespół stresu pourazowego, PTSD</td>
+      <td>Healing with Entactogens: Therapist and Patient Perspectives on MDMA-Assisted Group Psychotherapy</td>
+      <td>2020-05-27</td>
+      <td>NaN</td>
+      <td>9788360685501</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4929132/terapia-z-uzyciem-mdma-i-innych-entaktogenow">https://lubimyczytac.pl/ksiazka/4929132/terapia-z-uzyciem-mdma-i-innych-entaktogenow</a></td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4973000/4973315/921241-352x500.jpg" width="60" ></td>
+      <td>Paskudnik warszawski</td>
+      <td>Tymon Grabowski</td>
+      <td>2021-05-19</td>
+      <td>390</td>
+      <td>7,5</td>
+      <td>15</td>
+      <td>historia</td>
+      <td>Złomnik</td>
+      <td>NaN</td>
+      <td>13 h 0 min - 19 h 30 min</td>
+      <td>Warszawa</td>
+      <td>NaN</td>
+      <td>2021-05-19</td>
+      <td>NaN</td>
+      <td>9788394679842</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4973315/paskudnik-warszawski">https://lubimyczytac.pl/ksiazka/4973315/paskudnik-warszawski</a></td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/218000/218164/262895-352x500.jpg" width="60" ></td>
+      <td>Krótka historia książek zakazanych</td>
+      <td>Werner Fuld</td>
+      <td>2014-04-16</td>
+      <td>352</td>
+      <td>6,4</td>
+      <td>76</td>
+      <td>publicystyka literacka, eseje</td>
+      <td>Muza</td>
+      <td>NaN</td>
+      <td>11 h 44 min - 17 h 36 min</td>
+      <td></td>
+      <td>Das Buch der verbotenen Bücher: Universalgeschichte des Verfolgten und Verfemten von der Antike bis heute</td>
+      <td>2014-04-16</td>
+      <td>NaN</td>
+      <td>9788377585931</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/218164/krotka-historia-ksiazek-zakazanych">https://lubimyczytac.pl/ksiazka/218164/krotka-historia-ksiazek-zakazanych</a></td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/3871000/3871955/519112-352x500.jpg" width="60" ></td>
+      <td>Możesz być bogaty, czyli jak Szwajcarzy osiągnęli sukces gospodarczy</td>
+      <td>Wolfgang Koydl</td>
+      <td>2016-01-01</td>
+      <td>272</td>
+      <td>7,0</td>
+      <td>20</td>
+      <td>reportaż</td>
+      <td>Pascal</td>
+      <td>NaN</td>
+      <td>9 h 4 min - 13 h 36 min</td>
+      <td>Szwajcaria, ekonomia, gospodarka, rozwój, dobrobyt, kapitalizm</td>
+      <td>Die Besserkonner. Was die Schweiz so besonders macht</td>
+      <td>2016-01-01</td>
+      <td>NaN</td>
+      <td>9788376428611</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/3871955/mozesz-byc-bogaty-czyli-jak-szwajcarzy-osiagneli-sukces-gospodarczy">https://lubimyczytac.pl/ksiazka/3871955/mozesz-byc-bogaty-czyli-jak-szwajcarzy-osiagneli-sukces-gospodarczy</a></td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td><img src="https://s.lubimyczytac.pl/upload/books/4847000/4847951/661456-352x500.jpg" width="60" ></td>
+      <td>Dwa tysiące. Instrukcja obsługi polskiej urbanizacji w XXI wieku</td>
+      <td>Łukasz Drozda</td>
+      <td>2018-03-20</td>
+      <td>244</td>
+      <td>6,5</td>
+      <td>15</td>
+      <td>nauki społeczne (psychologia, socjologia, itd.)</td>
+      <td>Fundacja Bęc Zmiana</td>
+      <td>NaN</td>
+      <td>8 h 8 min - 12 h 12 min</td>
+      <td>urbanistyka, miasto, ład przestrzenny, planowanie przestrzenne</td>
+      <td>NaN</td>
+      <td>2018-03-20</td>
+      <td>NaN</td>
+      <td>9788362418855</td>
+      <td>polski</td>
+      <td><a href="https://lubimyczytac.pl/ksiazka/4847951/dwa-tysiace-instrukcja-obslugi-polskiej-urbanizacji-w-xxi-wieku">https://lubimyczytac.pl/ksiazka/4847951/dwa-tysiace-instrukcja-obslugi-polskiej-urbanizacji-w-xxi-wieku</a></td>
     </tr>
   </tbody>
 </table>
